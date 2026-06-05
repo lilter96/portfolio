@@ -1,0 +1,83 @@
+root = true
+
+# ── C# code style ──────────────────────────────────────────────
+[*.{cs,csx}]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# ── Naming conventions ──────────────────────────────────────────
+# Types and namespaces: PascalCase
+dotnet_naming_rule.types_and_namespaces_pascalcase.severity = warning
+dotnet_naming_rule.types_and_namespaces_pascalcase.symbols = types_and_namespaces
+dotnet_naming_rule.types_and_namespaces_pascalcase.style = pascalcase
+
+dotnet_naming_symbols.types_and_namespaces.applicable_kinds = class, struct, interface, enum, delegate, namespace
+dotnet_naming_symbols.types_and_namespaces.applicable_accessibilities = *
+dotnet_naming_symbols.types_and_namespaces.required_modifiers =
+
+dotnet_naming_style.pascalcase.capitalization = pascal_case
+
+# Interfaces: IPascalCase (require I prefix)
+dotnet_naming_rule.interface_ipascalcase.severity = warning
+dotnet_naming_rule.interface_ipascalcase.symbols = interface_symbols
+dotnet_naming_rule.interface_ipascalcase.style = ipascalcase
+
+dotnet_naming_symbols.interface_symbols.applicable_kinds = interface
+dotnet_naming_symbols.interface_symbols.applicable_accessibilities = *
+dotnet_naming_symbols.interface_symbols.required_modifiers =
+
+dotnet_naming_style.ipascalcase.capitalization = pascal_case
+dotnet_naming_style.ipascalcase.required_prefix = I
+
+# Private fields: _camelCase
+dotnet_naming_rule.private_fields_underscore.severity = warning
+dotnet_naming_rule.private_fields_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_underscore.style = underscore_camel
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.required_modifiers =
+
+dotnet_naming_style.underscore_camel.capitalization = camel_case
+dotnet_naming_style.underscore_camel.required_prefix = _
+
+# ── Code quality ────────────────────────────────────────────────
+dotnet_diagnostic.CA1303.severity = warning
+dotnet_diagnostic.CA1062.severity = warning
+dotnet_diagnostic.CA2007.severity = warning
+dotnet_diagnostic.CA1031.severity = suggestion
+
+# Prefer var when type is apparent
+csharp_style_var_for_built_in_types = true:warning
+csharp_style_var_when_type_is_apparent = true:warning
+
+# Expression-bodied members where appropriate
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+
+# Pattern matching
+csharp_style_prefer_switch_expression = true:suggestion
+csharp_style_pattern_matching_over_as_with_null_check = true:warning
+
+# Null checking
+csharp_style_throw_expression = true:suggestion
+csharp_style_conditional_delegate_call = true:suggestion
+csharp_style_prefer_null_check_over_type_check = true:warning
+
+# using directives: inside namespace (vertical slice preference)
+csharp_using_directive_placement = inside_namespace:warning
+
+# ── Solution files ─────────────────────────────────────────────
+[*.{sln,xml,csproj,props,targets}]
+indent_style = space
+indent_size = 2
+
+# ── General ─────────────────────────────────────────────────────
+[*.{json,config,yml,yaml}]
+indent_style = space
+indent_size = 2

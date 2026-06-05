@@ -75,6 +75,15 @@ venv/
 *.out
 vendor/
 
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
+
 # Docker
 .docker/
 

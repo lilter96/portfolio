@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Portfolio.Api.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <!-- NU1903: transitive vulnerability in xunit dependency; not a shipping concern -->
+    <!-- CA1515: xUnit requires test classes/fixtures to be public -->
+    <!-- CA2213: Testcontainers disposed in IAsyncLifetime.DisposeAsync -->
+    <!-- CA1711: xUnit convention uses Collection suffix for CollectionDefinition types -->
+    <NoWarn>$(NoWarn);NU1903;CA1515;CA2213;CA1711</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+    <PackageReference Include="Testcontainers.Redis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Api\Portfolio.Api.csproj" />
+  </ItemGroup>
+
+</Project>

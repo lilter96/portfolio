@@ -1,0 +1,7 @@
+# EF Core auto-generated migration files — suppress style/design rules
+[*.cs]
+generated_code = true
+dotnet_diagnostic.IDE0065.severity = none
+dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.IDE0161.severity = none
+dotnet_diagnostic.IDE0005.severity = none
