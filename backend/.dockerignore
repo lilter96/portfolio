@@ -1,0 +1,37 @@
+# ── Dependencies ─────────────────────────────────────────────
+node_modules/
+
+# ── Build output ─────────────────────────────────────────────
+bin/
+obj/
+*.tsbuildinfo
+
+# ── Tests (not needed at runtime) ────────────────────────────
+tests/
+TestResults/
+
+# ── IDE / OS ─────────────────────────────────────────────────
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# ── Environment / secrets ────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Git ──────────────────────────────────────────────────────
+.git/
+.gitignore
+
+# ── Docker ───────────────────────────────────────────────────
+.docker/
+Dockerfile
+.dockerignore
+
+# ── Docs ─────────────────────────────────────────────────────
+docs/
+*.md
