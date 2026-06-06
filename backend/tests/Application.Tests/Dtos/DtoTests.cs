@@ -18,7 +18,8 @@ namespace Portfolio.Application.Tests.Dtos
                 SortOrder: 10,
                 Status: "OpenSource",
                 Role: "Solo developer",
-                EvidenceUrl: "https://github.com/example");
+                EvidenceUrl: "https://github.com/example",
+                Domain: "Crypto");
 
             dto.Title.Should().Be("Test Project");
             dto.Technologies.Should().HaveCount(2).And.Contain(["C#", ".NET"]);
@@ -73,7 +74,8 @@ namespace Portfolio.Application.Tests.Dtos
                 SortOrder: 0,
                 Status: "WorkNda",
                 Role: "Backend lead",
-                EvidenceUrl: null);
+                EvidenceUrl: null,
+                Domain: "IGaming");
 
             dto.Url.Should().BeNull();
             dto.SourceUrl.Should().BeNull();
