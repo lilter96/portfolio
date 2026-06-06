@@ -11,13 +11,15 @@ namespace Portfolio.Domain.Entities
             string name,
             string category,
             int proficiency,
-            int sortOrder)
+            int sortOrder,
+            string? evidence = null)
         {
             Id = Guid.NewGuid();
             Name = name;
             Category = category;
             Proficiency = proficiency;
             SortOrder = sortOrder;
+            Evidence = evidence;
             CreatedAt = DateTimeOffset.UtcNow;
         }
 
@@ -26,6 +28,7 @@ namespace Portfolio.Domain.Entities
         public string Category { get; private set; } = string.Empty;
         public int Proficiency { get; private set; } // 0-100
         public int SortOrder { get; private set; }
+        public string? Evidence { get; private set; }
         public DateTimeOffset CreatedAt { get; private set; }
     }
 }

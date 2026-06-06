@@ -13,7 +13,11 @@ namespace Portfolio.Domain.Entities
             string? url,
             string? sourceUrl,
             List<string> technologies,
-            int sortOrder)
+            int sortOrder,
+            ProjectStatus status = ProjectStatus.Personal,
+            string role = "",
+            string? evidenceUrl = null,
+            ProjectDomain domain = ProjectDomain.Fullstack)
         {
             Id = Guid.NewGuid();
             Title = title;
@@ -22,6 +26,10 @@ namespace Portfolio.Domain.Entities
             SourceUrl = sourceUrl;
             Technologies = technologies;
             SortOrder = sortOrder;
+            Status = status;
+            Role = role;
+            EvidenceUrl = evidenceUrl;
+            Domain = domain;
             CreatedAt = DateTimeOffset.UtcNow;
         }
 
@@ -32,6 +40,10 @@ namespace Portfolio.Domain.Entities
         public string? SourceUrl { get; private set; }
         public List<string> Technologies { get; private set; } = [];
         public int SortOrder { get; private set; }
+        public ProjectStatus Status { get; private set; }
+        public string Role { get; private set; } = string.Empty;
+        public string? EvidenceUrl { get; private set; }
+        public ProjectDomain Domain { get; private set; }
         public DateTimeOffset CreatedAt { get; private set; }
     }
 }

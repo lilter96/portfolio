@@ -10,5 +10,9 @@ namespace Portfolio.Application.Dtos
         string? Url,
         string? SourceUrl,
         List<string> Technologies,
-        int SortOrder);
+        int SortOrder,
+        string Status,
+        string Role,
+        string? EvidenceUrl,
+        string Domain);
 }

@@ -8,5 +8,6 @@ namespace Portfolio.Application.Dtos
         string Name,
         string Category,
         int Proficiency,
-        int SortOrder);
+        int SortOrder,
+        string? Evidence);
 }

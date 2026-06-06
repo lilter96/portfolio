@@ -19,7 +19,11 @@ namespace Portfolio.Application.Mapping
                 project.Url,
                 project.SourceUrl,
                 project.Technologies,
-                project.SortOrder);
+                project.SortOrder,
+                project.Status.ToString(),
+                project.Role,
+                project.EvidenceUrl,
+                project.Domain.ToString());
         }
 
         public static ExperienceDto ToDto(this Experience experience)
@@ -42,7 +46,8 @@ namespace Portfolio.Application.Mapping
                 skill.Name,
                 skill.Category,
                 skill.Proficiency,
-                skill.SortOrder);
+                skill.SortOrder,
+                skill.Evidence);
         }
     }
 }

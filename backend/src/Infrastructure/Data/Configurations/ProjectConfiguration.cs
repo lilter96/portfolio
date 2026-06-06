@@ -19,6 +19,10 @@ namespace Portfolio.Infrastructure.Data.Configurations
             builder.Property(p => p.SourceUrl).HasMaxLength(2048);
             builder.Property(p => p.Technologies).HasColumnType("jsonb").IsRequired();
             builder.Property(p => p.SortOrder).IsRequired();
+            builder.Property(p => p.Status).HasConversion<string>().HasMaxLength(32).IsRequired();
+            builder.Property(p => p.Role).HasMaxLength(256).IsRequired();
+            builder.Property(p => p.EvidenceUrl).HasMaxLength(2048);
+            builder.Property(p => p.Domain).HasConversion<string>().HasMaxLength(32).IsRequired();
             builder.Property(p => p.CreatedAt).IsRequired();
 
             builder.HasIndex(p => p.SortOrder);

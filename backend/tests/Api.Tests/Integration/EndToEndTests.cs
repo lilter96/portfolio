@@ -56,7 +56,7 @@ namespace Portfolio.Api.Tests.Integration
 
             Assert.NotNull(projects);
             Assert.NotEmpty(projects);
-            Assert.Contains(projects, p => p.Title.Contains("SpinTon", StringComparison.Ordinal));
+            Assert.Contains(projects, p => p.Title.Contains("TGSlots", StringComparison.Ordinal));
             Assert.Contains(projects, p => p.Title.Contains("Provably Fair", StringComparison.Ordinal));
             Assert.Contains(projects, p => p.Title.Contains("crypto-exchange-rates", StringComparison.Ordinal));
         }

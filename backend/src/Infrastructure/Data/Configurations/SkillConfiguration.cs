@@ -17,6 +17,7 @@ namespace Portfolio.Infrastructure.Data.Configurations
             builder.Property(s => s.Category).HasMaxLength(128).IsRequired();
             builder.Property(s => s.Proficiency).IsRequired();
             builder.Property(s => s.SortOrder).IsRequired();
+            builder.Property(s => s.Evidence).HasMaxLength(2048);
             builder.Property(s => s.CreatedAt).IsRequired();
 
             builder.HasIndex(s => s.Category);
