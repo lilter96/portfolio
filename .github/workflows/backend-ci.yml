@@ -10,6 +10,7 @@ on:
     branches: [main]
     paths:
       - "backend/**"
+  workflow_dispatch:
 
 env:
   DOTNET_VERSION: "10.0.x"
@@ -33,12 +34,52 @@ jobs:
         run: dotnet build --no-restore
         working-directory: backend
 
-      - name: Run unit tests
+      - name: Run unit tests + coverage
         run: >
           dotnet test --no-build
           --filter "FullyQualifiedName~Domain.Tests|FullyQualifiedName~Application.Tests|FullyQualifiedName~Infrastructure.Tests"
           --logger "trx;LogFileName=unit-tests.trx"
+          --collect:"XPlat Code Coverage"
+          --results-directory TestResults
         working-directory: backend
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-unit-test-results
+          path: backend/TestResults/**/*.trx
+
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage
+          path: backend/TestResults/**/coverage.cobertura.xml
+
+      - name: Check coverage threshold
+        run: |
+          python3 -c "
+          import xml.etree.ElementTree as ET, sys
+          from pathlib import Path
+          files = list(Path('backend/TestResults').rglob('coverage.cobertura.xml'))
+          if not files:
+              print('No coverage file found — skipping threshold check')
+              sys.exit(0)
+          tree = ET.parse(str(files[0]))
+          line_rate = float(tree.getroot().attrib.get('line-rate', 0))
+          pct = line_rate * 100
+          threshold = 30
+          print(f'Line coverage: {pct:.1f}% (threshold: {threshold}%)')
+          if pct < threshold:
+              print(f'ERROR: Coverage {pct:.1f}% below {threshold}% threshold')
+              sys.exit(1)
+          print('Coverage threshold met')
+          "
+
+      - name: Lint (dotnet format)
+        run: dotnet format analyzers backend/Portfolio.slnx --verify-no-changes --no-restore
+        continue-on-error: true
 
   integration:
     runs-on: ubuntu-latest
@@ -64,7 +105,14 @@ jobs:
           dotnet test --no-build
           --filter "FullyQualifiedName~Integration.EndToEndTests"
           --logger "trx;LogFileName=integration-tests.trx"
+          --results-directory TestResults
         working-directory: backend
         env:
-          # Testcontainers uses the Docker daemon on the runner
           DOCKER_HOST: unix:///var/run/docker.sock
+
+      - name: Upload integration test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-integration-test-results
+          path: backend/TestResults/**/*.trx
