@@ -1,0 +1,146 @@
+/* ─────────────────────────────────────────────────────────────
+   Design Tokens — "Terminal Casino"
+   A neon-lit engineering dashboard. CRT terminal meets slot
+   machine internals. Dark, atmospheric, precise.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Colors: Dark Theme (default) ──────────────────────── */
+  --color-bg-primary: #08080f;
+  --color-bg-secondary: #0f0f1a;
+  --color-bg-tertiary: #161625;
+  --color-bg-elevated: #1c1c30;
+
+  --color-surface-card: #141425;
+  --color-surface-overlay: rgba(8, 8, 15, 0.85);
+
+  --color-text-primary: #e8e6f0;
+  --color-text-secondary: #a29eb5;
+  --color-text-muted: #8c8a9e;
+  --color-text-inverse: #0a0a0f;
+
+  /* Neon accents — the slot machine palette */
+  --color-accent-green: #00ff41;  /* Terminal green */
+  --color-accent-amber: #ffb800;  /* Warning / jackpot amber */
+  --color-accent-cherry: #ff2d55; /* Cherry red — the reel symbol */
+  --color-accent-gold: #ffd700;   /* Jackpot gold */
+  --color-accent-blue: #0af;      /* CRT tube blue */
+
+  /* Semantic use of accents */
+  --color-primary: var(--color-accent-green);
+  --color-secondary: var(--color-accent-amber);
+  --color-danger: var(--color-accent-cherry);
+  --color-highlight: var(--color-accent-gold);
+  --color-info: var(--color-accent-blue);
+
+  /* ── Typography ────────────────────────────────────────── */
+  --font-display: "Orbitron", sans-serif;
+  --font-heading: "Saira", sans-serif;
+  --font-body: "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Type scale: 1.25 (Major Third) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.563rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-3xl: 3.052rem;
+  --text-4xl: 3.815rem;
+  --text-5xl: 4.768rem;
+
+  --leading-tight: 1.1;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* ── Spacing (4px base) ────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Radii ──────────────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
+  --shadow-neon-green: 0 0 12px rgba(0, 255, 65, 0.3);
+  --shadow-neon-amber: 0 0 12px rgba(255, 184, 0, 0.25);
+  --shadow-neon-cherry: 0 0 12px rgba(255, 45, 85, 0.3);
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --border-thin: 1px solid var(--color-bg-elevated);
+  --border-accent: 1px solid var(--color-primary);
+  --border-glow: 1px solid rgba(0, 255, 65, 0.15);
+
+  /* ── Transitions ────────────────────────────────────────── */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+  --duration-glacial: 1200ms;
+
+  /* ── Z-index ────────────────────────────────────────────── */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* ── Light Theme Override ──────────────────────────────────── */
+[data-theme="light"] {
+  --color-bg-primary: #faf8f5;
+  --color-bg-secondary: #f0ede8;
+  --color-bg-tertiary: #e8e4de;
+  --color-bg-elevated: #dfdbd4;
+
+  --color-surface-card: #ffffff;
+  --color-surface-overlay: rgba(250, 248, 245, 0.9);
+
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #444258;
+  --color-text-muted: #58566b;
+  --color-text-inverse: #f0ede8;
+
+  --color-accent-green: #006e24;
+  --color-accent-amber: #8c5f00;
+  --color-accent-cherry: #d41c3e;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-neon-green: 0 0 8px rgba(0, 166, 54, 0.15);
+  --shadow-neon-amber: 0 0 8px rgba(198, 138, 0, 0.12);
+  --shadow-neon-cherry: 0 0 8px rgba(212, 28, 62, 0.15);
+
+  --border-thin: 1px solid var(--color-bg-tertiary);
+  --border-accent: 1px solid var(--color-accent-green);
+  --border-glow: 1px solid rgba(0, 166, 54, 0.1);
+}

@@ -1,0 +1,143 @@
+/* ─────────────────────────────────────────────────────────────
+   Layout Shell — responsive nav, footer, breakpoints
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Nav ────────────────────────────────────────────────── */
+.top-nav {
+  position: sticky;
+  top: 0;
+  padding-top: env(safe-area-inset-top, 0px);
+  z-index: var(--z-sticky);
+  background: var(--color-surface-overlay);
+  backdrop-filter: blur(12px);
+  border-bottom: var(--border-glow);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-6);
+}
+
+.nav-brand {
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.nav-brand-dot {
+  color: var(--color-accent-cherry);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ── Language Switcher ─────────────────────────────────── */
+.lang-switcher {
+  background: var(--color-surface-card);
+  border: var(--border-glow);
+  color: var(--color-text-primary);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-height: 24px;
+  min-width: 44px;
+  transition: all var(--duration-normal) var(--ease-out-expo);
+}
+
+.lang-switcher:hover {
+  box-shadow: var(--shadow-neon-green);
+  border-color: var(--color-primary);
+}
+
+/* ── Main ──────────────────────────────────────────────── */
+.main-content {
+  min-height: calc(100dvh - 200px);
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.site-footer {
+  border-top: var(--border-glow);
+  padding: var(--space-8) var(--space-6);
+}
+
+.footer-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Theme toggle (in nav) ─────────────────────────────── */
+.theme-toggle {
+  position: static;
+}
+
+/* ── Responsive grid utility ──────────────────────────── */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ── Responsive breakpoints ────────────────────────────── */
+
+/* Tablet: 768px */
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .main-content {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .footer-inner {
+    padding: 0 var(--space-4);
+  }
+
+
+  /* Keep base font-size at 16px for legibility */
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .nav-brand {
+    font-size: var(--text-base);
+  }
+
+  .main-content {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .footer-inner {
+    padding: 0 var(--space-3);
+  }
+
+
+  /* Keep base font-size at 16px for legibility */
+
+  /* Stack grid items */
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Terentiy Gatsukov — Portfolio",
+  "short_name": "TG Portfolio",
+  "description": "Backend engineer at the intersection of iGaming, .NET, and real-time systems.",
+  "start_url": ".",
+  "display": "browser",
+  "background_color": "#08080f",
+  "theme_color": "#08080f",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

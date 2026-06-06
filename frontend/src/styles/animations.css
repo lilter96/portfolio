@@ -1,0 +1,233 @@
+/* ─────────────────────────────────────────────────────────────
+   Motion System — "Terminal Casino"
+   Staggered reveals, neon glow, scanline overlay,
+   reel-spin transitions, typewriter effects
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Scanline overlay (subtle CRT effect) ───────────────── */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-overlay);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+[data-theme="light"] .scanlines {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.015) 2px,
+    rgba(0, 0, 0, 0.015) 4px
+  );
+}
+
+/* ── Neon glow pulse ────────────────────────────────────── */
+@keyframes neon-pulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 4px var(--color-primary),
+      0 0 8px var(--color-primary),
+      0 0 16px var(--color-primary);
+  }
+  50% {
+    text-shadow:
+      0 0 2px var(--color-primary),
+      0 0 4px var(--color-primary),
+      0 0 8px var(--color-primary);
+  }
+}
+
+.neon {
+  animation: neon-pulse 2s var(--ease-in-out) infinite;
+}
+
+/* ── Staggered reveal on page load ──────────────────────── */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: reveal-up var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+.reveal-1 {
+  animation-delay: 0ms;
+}
+.reveal-2 {
+  animation-delay: 100ms;
+}
+.reveal-3 {
+  animation-delay: 200ms;
+}
+.reveal-4 {
+  animation-delay: 300ms;
+}
+.reveal-5 {
+  animation-delay: 400ms;
+}
+.reveal-6 {
+  animation-delay: 500ms;
+}
+.reveal-7 {
+  animation-delay: 600ms;
+}
+.reveal-8 {
+  animation-delay: 700ms;
+}
+
+/* ── Typewriter cursor ──────────────────────────────────── */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor::after {
+  content: "_";
+  display: inline;
+  animation: blink 1s step-end infinite;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ── Border glow on hover ───────────────────────────────── */
+@keyframes border-glow {
+  from {
+    box-shadow: 0 0 2px var(--color-primary);
+  }
+  to {
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.4);
+  }
+}
+
+.glow-hover:hover {
+  animation: border-glow 1s var(--ease-in-out) infinite alternate;
+}
+
+/* ── Spin (slot reel) motion ────────────────────────────── */
+@keyframes slot-spin {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.spin {
+  animation: slot-spin 0.8s var(--ease-out-back);
+}
+
+/* ── Fade in from edges ─────────────────────────────────── */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slide-in-left var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+.slide-right {
+  animation: slide-in-right var(--duration-slow) var(--ease-out-expo) forwards;
+}
+
+/* ── Loading pulse (for QueryState) ──────────────────────── */
+@keyframes loading-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.query-loading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+}
+
+.loading-pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  animation: loading-pulse 1s var(--ease-in-out) infinite;
+  box-shadow: var(--shadow-neon-green);
+}
+
+.query-error {
+  padding: var(--space-4);
+  border: 1px solid var(--color-accent-cherry);
+  border-radius: var(--radius-md);
+  background: rgba(255, 45, 85, 0.05);
+}
+
+.query-empty {
+  padding: var(--space-4);
+  border: var(--border-glow);
+  border-radius: var(--radius-md);
+}
+
+/* ── Preference: reduce motion ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
