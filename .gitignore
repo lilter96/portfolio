@@ -87,6 +87,12 @@ TestResults/
 # Docker
 .docker/
 
+# Playwright MCP
+.playwright-mcp/
+
+# Lighthouse CI reports
+.lighthouseci/
+
 # Misc
 *.tmp
 *.bak
