@@ -1,57 +1,64 @@
 {
-  "reviewStatus": "awaiting owner approval; do not publish",
+  "reviewStatus": "Final review V3 \u2014 awaiting owner approval; do not publish",
   "sourceGameplayCommit": "4d079f2",
   "captureMode": "normal; native NVIDIA GPU; direct canvas capture",
   "sourceIntervalFPS": {
-    "min": 57.587,
-    "max": 60.016
+    "min": 57.56,
+    "max": 60.013
   },
   "exportFPS": 60,
   "noRetiming": true,
   "noGeneratedOutcomes": true,
   "graphics": "raster only; no SVG",
+  "music": {
+    "title": "Exit the Premises",
+    "artist": "Kevin MacLeod",
+    "isrc": "USUAN1500029",
+    "license": "CC BY 4.0",
+    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500029"
+  },
   "engineeringEvidence": {
-    "leMilitareIndependentlyAuditedCompleteRounds": 81600000,
+    "leMilitareCompleteRoundsCheckedWithIndependentEvaluator": 81600000,
     "platformTestsPassedAtCommit": 767
   },
   "verification": [
     {
       "file": "tgslots-reel.mp4",
-      "duration": 38.55,
+      "duration": 36.783333,
       "dimensions": [
         1280,
         720
       ],
       "exportFps": "60/1",
-      "actualFrameCount": 2313,
+      "actualFrameCount": 2207,
       "decodeErrors": "",
       "loudness": {
-        "input_i": "-15.27",
-        "input_tp": "-3.92",
-        "input_lra": "3.20",
-        "input_thresh": "-25.33",
-        "output_i": "-15.71",
-        "output_tp": "-4.24",
-        "output_lra": "2.30",
-        "output_thresh": "-25.74",
+        "input_i": "-16.33",
+        "input_tp": "-4.34",
+        "input_lra": "1.80",
+        "input_thresh": "-26.33",
+        "output_i": "-16.15",
+        "output_tp": "-4.03",
+        "output_lra": "1.90",
+        "output_thresh": "-26.15",
         "normalization_type": "dynamic",
-        "target_offset": "-0.29"
+        "target_offset": "0.15"
       },
       "sourceIntervals": [
         {
           "game": "combat",
           "start": 41,
-          "duration": 4.583333333333333,
-          "fps": 57.587,
-          "p95GapMs": 19.0,
+          "duration": 4.533333333333333,
+          "fps": 57.56,
+          "p95GapMs": 19.05,
           "maxGapMs": 85.0,
           "passCadence": true
         },
         {
           "game": "dragon",
           "start": 4,
-          "duration": 6.3,
-          "fps": 59.526,
+          "duration": 6.25,
+          "fps": 59.522,
           "p95GapMs": 17.0,
           "maxGapMs": 27.0,
           "passCadence": true
@@ -59,8 +66,8 @@
         {
           "game": "forest",
           "start": 10.3,
-          "duration": 6.516666666666667,
-          "fps": 59.385,
+          "duration": 6.4,
+          "fps": 59.367,
           "p95GapMs": 17.0,
           "maxGapMs": 35.0,
           "passCadence": true
@@ -68,8 +75,8 @@
         {
           "game": "forest",
           "start": 20.2,
-          "duration": 6.3,
-          "fps": 60.003,
+          "duration": 6.2,
+          "fps": 60.013,
           "p95GapMs": 17.0,
           "maxGapMs": 18.0,
           "passCadence": true
@@ -86,8 +93,8 @@
         {
           "game": "combat",
           "start": 24,
-          "duration": 4.75,
-          "fps": 60.004,
+          "duration": 4.0,
+          "fps": 60.005,
           "p95GapMs": 17.0,
           "maxGapMs": 23.0,
           "passCadence": true
@@ -95,8 +102,8 @@
         {
           "game": "dragon",
           "start": 16,
-          "duration": 5.2,
-          "fps": 59.618,
+          "duration": 4.5,
+          "fps": 59.558,
           "p95GapMs": 17.0,
           "maxGapMs": 26.0,
           "passCadence": true
@@ -108,33 +115,33 @@
     },
     {
       "file": "le-militare-promo.mp4",
-      "duration": 24.866667,
+      "duration": 23.433333,
       "dimensions": [
         1280,
         720
       ],
       "exportFps": "60/1",
-      "actualFrameCount": 1492,
+      "actualFrameCount": 1406,
       "decodeErrors": "",
       "loudness": {
-        "input_i": "-15.27",
-        "input_tp": "-4.20",
-        "input_lra": "3.60",
-        "input_thresh": "-25.33",
-        "output_i": "-15.61",
-        "output_tp": "-4.29",
-        "output_lra": "3.10",
-        "output_thresh": "-25.64",
+        "input_i": "-16.13",
+        "input_tp": "-3.36",
+        "input_lra": "1.90",
+        "input_thresh": "-26.13",
+        "output_i": "-16.17",
+        "output_tp": "-3.53",
+        "output_lra": "2.00",
+        "output_thresh": "-26.17",
         "normalization_type": "dynamic",
-        "target_offset": "-0.39"
+        "target_offset": "0.17"
       },
       "sourceIntervals": [
         {
           "game": "combat",
           "start": 41,
-          "duration": 4.583333333333333,
-          "fps": 57.587,
-          "p95GapMs": 19.0,
+          "duration": 4.533333333333333,
+          "fps": 57.56,
+          "p95GapMs": 19.05,
           "maxGapMs": 85.0,
           "passCadence": true
         },
@@ -150,8 +157,8 @@
         {
           "game": "combat",
           "start": 15.1,
-          "duration": 6.266666666666667,
-          "fps": 58.72,
+          "duration": 6.4,
+          "fps": 58.75,
           "p95GapMs": 18.0,
           "maxGapMs": 77.0,
           "passCadence": true
@@ -159,8 +166,8 @@
         {
           "game": "combat",
           "start": 24,
-          "duration": 4.816666666666666,
-          "fps": 60.0,
+          "duration": 4.0,
+          "fps": 60.005,
           "p95GapMs": 17.0,
           "maxGapMs": 23.0,
           "passCadence": true
@@ -168,8 +175,8 @@
         {
           "game": "dragon",
           "start": 16,
-          "duration": 5.2,
-          "fps": 59.618,
+          "duration": 4.5,
+          "fps": 59.558,
           "p95GapMs": 17.0,
           "maxGapMs": 26.0,
           "passCadence": true
@@ -181,32 +188,32 @@
     },
     {
       "file": "woodland-whisper-promo.mp4",
-      "duration": 22.033333,
+      "duration": 21.433333,
       "dimensions": [
         1280,
         720
       ],
       "exportFps": "60/1",
-      "actualFrameCount": 1322,
+      "actualFrameCount": 1286,
       "decodeErrors": "",
       "loudness": {
-        "input_i": "-15.95",
-        "input_tp": "-5.53",
-        "input_lra": "3.60",
-        "input_thresh": "-25.99",
-        "output_i": "-16.14",
-        "output_tp": "-5.81",
-        "output_lra": "2.10",
-        "output_thresh": "-26.16",
+        "input_i": "-15.80",
+        "input_tp": "-4.06",
+        "input_lra": "2.20",
+        "input_thresh": "-25.80",
+        "output_i": "-15.73",
+        "output_tp": "-3.89",
+        "output_lra": "2.00",
+        "output_thresh": "-25.73",
         "normalization_type": "dynamic",
-        "target_offset": "0.14"
+        "target_offset": "-0.27"
       },
       "sourceIntervals": [
         {
           "game": "forest",
           "start": 10.3,
-          "duration": 6.5,
-          "fps": 59.386,
+          "duration": 6.416666666666667,
+          "fps": 59.375,
           "p95GapMs": 17.0,
           "maxGapMs": 35.0,
           "passCadence": true
@@ -214,8 +221,8 @@
         {
           "game": "forest",
           "start": 20.2,
-          "duration": 6.133333333333334,
-          "fps": 60.007,
+          "duration": 6.25,
+          "fps": 60.013,
           "p95GapMs": 17.0,
           "maxGapMs": 18.0,
           "passCadence": true
@@ -223,8 +230,8 @@
         {
           "game": "forest",
           "start": 30.1,
-          "duration": 4.95,
-          "fps": 60.016,
+          "duration": 5.016666666666667,
+          "fps": 60.012,
           "p95GapMs": 17.0,
           "maxGapMs": 20.0,
           "passCadence": true
@@ -232,8 +239,8 @@
         {
           "game": "dragon",
           "start": 16,
-          "duration": 5.2,
-          "fps": 59.618,
+          "duration": 4.5,
+          "fps": 59.558,
           "p95GapMs": 17.0,
           "maxGapMs": 26.0,
           "passCadence": true
@@ -245,25 +252,25 @@
     },
     {
       "file": "ancient-dragon-promo.mp4",
-      "duration": 21.25,
+      "duration": 20.5,
       "dimensions": [
         1280,
         720
       ],
       "exportFps": "60/1",
-      "actualFrameCount": 1275,
+      "actualFrameCount": 1230,
       "decodeErrors": "",
       "loudness": {
-        "input_i": "-15.91",
-        "input_tp": "-5.00",
-        "input_lra": "5.00",
-        "input_thresh": "-25.98",
-        "output_i": "-16.14",
-        "output_tp": "-5.36",
-        "output_lra": "2.20",
-        "output_thresh": "-26.18",
+        "input_i": "-16.01",
+        "input_tp": "-3.29",
+        "input_lra": "0.80",
+        "input_thresh": "-26.01",
+        "output_i": "-16.04",
+        "output_tp": "-3.17",
+        "output_lra": "0.50",
+        "output_thresh": "-26.04",
         "normalization_type": "dynamic",
-        "target_offset": "0.14"
+        "target_offset": "0.04"
       },
       "sourceIntervals": [
         {
@@ -278,10 +285,10 @@
         {
           "game": "dragon",
           "start": 11,
-          "duration": 6,
-          "fps": 59.973,
+          "duration": 5.95,
+          "fps": 60.003,
           "p95GapMs": 17.0,
-          "maxGapMs": 20.0,
+          "maxGapMs": 19.0,
           "passCadence": true
         },
         {
@@ -296,8 +303,8 @@
         {
           "game": "dragon",
           "start": 16,
-          "duration": 5.2,
-          "fps": 59.618,
+          "duration": 4.5,
+          "fps": 59.558,
           "p95GapMs": 17.0,
           "maxGapMs": 26.0,
           "passCadence": true
@@ -309,41 +316,41 @@
     },
     {
       "file": "tgslots-linkedin.mp4",
-      "duration": 38.55,
+      "duration": 36.783333,
       "dimensions": [
         1080,
         1350
       ],
       "exportFps": "60/1",
-      "actualFrameCount": 2313,
+      "actualFrameCount": 2207,
       "decodeErrors": "",
       "loudness": {
-        "input_i": "-15.27",
-        "input_tp": "-3.92",
-        "input_lra": "3.20",
-        "input_thresh": "-25.33",
-        "output_i": "-15.71",
-        "output_tp": "-4.24",
-        "output_lra": "2.30",
-        "output_thresh": "-25.74",
+        "input_i": "-16.33",
+        "input_tp": "-4.34",
+        "input_lra": "1.80",
+        "input_thresh": "-26.33",
+        "output_i": "-16.15",
+        "output_tp": "-4.03",
+        "output_lra": "1.90",
+        "output_thresh": "-26.15",
         "normalization_type": "dynamic",
-        "target_offset": "-0.29"
+        "target_offset": "0.15"
       },
       "sourceIntervals": [
         {
           "game": "combat",
           "start": 41,
-          "duration": 4.583333333333333,
-          "fps": 57.587,
-          "p95GapMs": 19.0,
+          "duration": 4.533333333333333,
+          "fps": 57.56,
+          "p95GapMs": 19.05,
           "maxGapMs": 85.0,
           "passCadence": true
         },
         {
           "game": "dragon",
           "start": 4,
-          "duration": 6.3,
-          "fps": 59.526,
+          "duration": 6.25,
+          "fps": 59.522,
           "p95GapMs": 17.0,
           "maxGapMs": 27.0,
           "passCadence": true
@@ -351,8 +358,8 @@
         {
           "game": "forest",
           "start": 10.3,
-          "duration": 6.516666666666667,
-          "fps": 59.385,
+          "duration": 6.4,
+          "fps": 59.367,
           "p95GapMs": 17.0,
           "maxGapMs": 35.0,
           "passCadence": true
@@ -360,8 +367,8 @@
         {
           "game": "forest",
           "start": 20.2,
-          "duration": 6.3,
-          "fps": 60.003,
+          "duration": 6.2,
+          "fps": 60.013,
           "p95GapMs": 17.0,
           "maxGapMs": 18.0,
           "passCadence": true
@@ -378,8 +385,8 @@
         {
           "game": "combat",
           "start": 24,
-          "duration": 4.75,
-          "fps": 60.004,
+          "duration": 4.0,
+          "fps": 60.005,
           "p95GapMs": 17.0,
           "maxGapMs": 23.0,
           "passCadence": true
@@ -387,8 +394,8 @@
         {
           "game": "dragon",
           "start": 16,
-          "duration": 5.2,
-          "fps": 59.618,
+          "duration": 4.5,
+          "fps": 59.558,
           "p95GapMs": 17.0,
           "maxGapMs": 26.0,
           "passCadence": true
@@ -399,11 +406,42 @@
       "pass": true
     }
   ],
-  "checksums": {
-    "tgslots-reel.mp4": "20e0314eec48efc3e56382295b0b3f3bc1a689761a23b0a64f1a02a9cea54ab2",
-    "le-militare-promo.mp4": "eaf40689db2ba37ef59fb07dbb226ef6757220edd9522e827274afd516df9124",
-    "woodland-whisper-promo.mp4": "aee87cc48ffb22cf8df76aaf0eaa91c461e8744d4e5f9e5c0eb2897df36516bb",
-    "ancient-dragon-promo.mp4": "d34eb0cef31df02d9f70919c37ba15133ed408dfc22318e99ccb49c303ca22c1",
-    "tgslots-linkedin.mp4": "582da2becf2440fb7c5945d47e92e6f064f227feebbcd2a57a3c528a21f30244"
+  "sha256": {
+    "tgslots-reel.mp4": "05ec394f2dd05bd10530931687accb32abe21634bf59003031e451e8097fda0e",
+    "le-militare-promo.mp4": "aadd0f1b232931f988915d74f4f472adf6de0411f0f2e8465280057d1b41188a",
+    "woodland-whisper-promo.mp4": "157fa1dac0aaa12d9bb828f4080a3b7f6c4d294a72a09bf857e5d5d8c6b002f6",
+    "ancient-dragon-promo.mp4": "12c7c60a987aea00dd82433c196ab2dea1f99847b93a17ba3894eb6fb93334b6",
+    "tgslots-linkedin.mp4": "42d7b2e8a7b55f7c46ee95c1730caaec5f252fcb421a44034f66a34e7c21d21e"
+  },
+  "movingReelSampleVerification": [
+    {
+      "file": "le-militare-promo.mp4",
+      "start": 9.7,
+      "duration": 0.8,
+      "frames": 48,
+      "identicalAdjacentFrames": 0,
+      "medianPixelDifference": 8.644897119341564
+    },
+    {
+      "file": "woodland-whisper-promo.mp4",
+      "start": 7.0,
+      "duration": 0.8,
+      "frames": 48,
+      "identicalAdjacentFrames": 0,
+      "medianPixelDifference": 22.21185185185185
+    },
+    {
+      "file": "ancient-dragon-promo.mp4",
+      "start": 1.0,
+      "duration": 0.8,
+      "frames": 48,
+      "identicalAdjacentFrames": 0,
+      "medianPixelDifference": 20.384362139917695
+    }
+  ],
+  "siteValidation": {
+    "build": "passed",
+    "lint": "passed",
+    "deployment": "not performed"
   }
 }

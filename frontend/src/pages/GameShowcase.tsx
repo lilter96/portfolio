@@ -6,8 +6,8 @@ const clips = [
     id: "tgslots-reel",
     title: "TGSlots",
     description: "reelDescription",
-    duration: "0:39",
-    fullDuration: "0:39",
+    duration: "0:37",
+    fullDuration: "0:37",
   },
   {
     id: "ancient-dragon",
@@ -27,7 +27,7 @@ const clips = [
     id: "le-militare",
     title: "Le Militare",
     description: "militare",
-    duration: "0:25",
+    duration: "0:24",
     fullDuration: "1:21",
   },
 ] as const;
@@ -133,13 +133,13 @@ export function GameShowcase() {
       <p className="showreel-credits">
         {t("showreel.music")}{" "}
         <a
-          href="https://www.scottbuckley.com.au/library/titan/"
+          href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500029"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Titan
+          Exit the Premises
         </a>{" "}
-        — Scott Buckley ·{" "}
+        — Kevin MacLeod ·{" "}
         <a
           href="https://creativecommons.org/licenses/by/4.0/"
           target="_blank"
