@@ -6,29 +6,29 @@ const clips = [
     id: "tgslots-reel",
     title: "TGSlots",
     description: "reelDescription",
-    duration: "0:36",
-    fullDuration: "0:36",
+    duration: "0:39",
+    fullDuration: "0:39",
   },
   {
     id: "ancient-dragon",
     title: "Ancient Dragon",
     description: "dragon",
     duration: "0:21",
-    fullDuration: "0:21",
+    fullDuration: "0:37",
   },
   {
     id: "woodland-whisper",
     title: "Woodland Whisper",
     description: "woodland",
     duration: "0:22",
-    fullDuration: "0:33",
+    fullDuration: "0:57",
   },
   {
     id: "le-militare",
     title: "Le Militare",
     description: "militare",
-    duration: "0:24",
-    fullDuration: "0:59",
+    duration: "0:25",
+    fullDuration: "1:21",
   },
 ] as const;
 const media = `${import.meta.env.BASE_URL}media/slots/`;
@@ -132,22 +132,6 @@ export function GameShowcase() {
       </div>
       <p className="showreel-credits">
         {t("showreel.music")}{" "}
-        <a
-          href="https://www.scottbuckley.com.au/library/catalyst/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Catalyst
-        </a>
-        ,{" "}
-        <a
-          href="https://www.scottbuckley.com.au/library/helios/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Helios
-        </a>
-        ,{" "}
         <a
           href="https://www.scottbuckley.com.au/library/titan/"
           target="_blank"
