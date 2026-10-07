@@ -13,7 +13,11 @@ import type {
   ReadinessResponse,
 } from "@/types/api";
 
-const BASE = import.meta.env.VITE_API_BASE_URL as string;
+import { isStaticShowcase } from "@/lib/runtime-config";
+import { showcaseProjects, showcaseExperience, showcaseSkills } from "@/lib/showcase-content";
+
+const BASE = import.meta.env.VITE_API_BASE_URL ?? "";
+
 
 class ApiError extends Error {
   status: number;
@@ -45,20 +49,24 @@ async function fetchJson<T>(path: string, init?: RequestInit): Promise<T> {
 /* ── Content ────────────────────────────────────────────── */
 
 export function fetchProjects(): Promise<ProjectDto[]> {
+  if (isStaticShowcase) return Promise.resolve(showcaseProjects);
   return fetchJson("/api/v1/projects");
 }
 
 export function fetchExperience(): Promise<ExperienceDto[]> {
+  if (isStaticShowcase) return Promise.resolve(showcaseExperience);
   return fetchJson("/api/v1/experience");
 }
 
 export function fetchSkills(): Promise<SkillDto[]> {
+  if (isStaticShowcase) return Promise.resolve(showcaseSkills);
   return fetchJson("/api/v1/skills");
 }
 
 /* ── GitHub ──────────────────────────────────────────────── */
 
 export function fetchGitHubRepos(): Promise<GitHubRepoDto[]> {
+  if (isStaticShowcase) return Promise.resolve([]);
   return fetchJson("/api/v1/github/repos");
 }
 

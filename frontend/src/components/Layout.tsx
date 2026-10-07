@@ -8,6 +8,7 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation();
+  const homeUrl = import.meta.env.BASE_URL;
 
   return (
     <div className="layout">
@@ -19,7 +20,7 @@ export function Layout({ children }: LayoutProps) {
       {/* ── Nav ────────────────────────────────────────── */}
       <nav className="top-nav" role="navigation" aria-label="Main navigation">
         <div className="nav-inner">
-          <a href="/" className="nav-brand mono" aria-label="TG — Home">
+          <a href={homeUrl} className="nav-brand mono" aria-label="TG — Home">
             TG<span className="nav-brand-dot">.</span>
           </a>
           <div className="nav-controls">

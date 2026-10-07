@@ -25,7 +25,7 @@ export function About() {
           <p className="about-card-text about-card-tgslots">{t("about.tgslotsLive")}</p>
           <a
             className="about-tgslots-cta"
-            href="https://tgslots-marketing-production.up.railway.app/"
+            href="https://github.com/lilter96/slot-math-lab"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,8 +46,8 @@ export function About() {
             <span>React</span>
             <span>PostgreSQL</span>
             <span>Redis</span>
-            <span>F#</span>
-            <span>TON</span>
+            <span>Wolverine</span>
+            <span>Revit API</span>
           </div>
         </div>
 

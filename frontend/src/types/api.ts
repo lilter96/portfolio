@@ -16,16 +16,18 @@ export interface ProjectDto {
   domain: string;
 }
 
-export type ProjectDomain = "IGaming" | "Crypto" | "RealTime" | "Fullstack";
+export type ProjectDomain = "IGaming" | "Crypto" | "RealTime" | "Fullstack" | "Workflow" | "BIM";
 
 export const DOMAIN_LABELS: Record<ProjectDomain, string> = {
+  Workflow: "Durable workflows",
+  BIM: "BIM / CAD",
   IGaming: "iGaming",
   Crypto: "Crypto",
   RealTime: "Real-Time",
   Fullstack: "Fullstack",
 };
 
-export const DOMAINS: ProjectDomain[] = ["IGaming", "Crypto", "RealTime", "Fullstack"];
+export const DOMAINS: ProjectDomain[] = ["Workflow", "IGaming", "RealTime", "BIM", "Fullstack"];
 
 export type ProjectStatus = "Live" | "Personal" | "WorkNda" | "OpenSource";
 

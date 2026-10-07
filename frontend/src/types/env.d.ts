@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_API_BASE_URL: string;
+  readonly VITE_STATIC_SHOWCASE: string;
   readonly VITE_ENABLE_SLOT_DEMO: string;
 }
 

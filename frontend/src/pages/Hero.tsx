@@ -53,7 +53,7 @@ export function Hero() {
           </a>
           <a
             className="hero-cta hero-cta-cv"
-            href={cv.url}
+            href={`${import.meta.env.BASE_URL}${cv.url.slice(1)}`}
             download={cv.name}
             rel="noopener noreferrer"
           >

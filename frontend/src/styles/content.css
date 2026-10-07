@@ -842,3 +842,6 @@
     padding: var(--space-1) var(--space-2);
   }
 }
+
+.workflow-preview { display: block; margin: 1.5rem 0 2rem; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+.workflow-preview img { display: block; width: 100%; height: auto; }

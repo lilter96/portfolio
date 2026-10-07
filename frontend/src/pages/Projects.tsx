@@ -6,8 +6,7 @@ import { QueryState } from "@/components/QueryState";
 import { DOMAINS, DOMAIN_LABELS } from "@/types/api";
 import type { ProjectDto, GitHubRepoDto, ProjectDomain, ProjectStatus } from "@/types/api";
 
-const TGSLOTS_URL = "https://tgslots-marketing-production.up.railway.app/";
-const FLAGSHIP_NAMES = ["TGSlots", "Provably Fair Slot Demo"];
+const FLAGSHIP_NAMES = ["JobFinder", "Slot Math Lab"];
 
 export function Projects() {
   const { t } = useTranslation();
@@ -31,34 +30,14 @@ export function Projects() {
   const isLoading = projects.isLoading || github.isLoading;
   const error = projects.error ?? github.error;
 
-  const isTgslots = useMemo(() => {
-    if (!projects.data) return null;
-    return projects.data.find((p) => p.title.includes("TGSlots")) ?? null;
-  }, [projects.data]);
 
   return (
     <section id="projects" className="projects-section" aria-label={t("nav.projects")}>
       <h2 className="section-title reveal">{t("nav.projects")}</h2>
 
-      {/* ── TGSlots Hero Artifact ─────────────────────────── */}
-      {isTgslots && (
-        <div className="tgslots-hero reveal reveal-1">
-          <div className="tgslots-hero-header">
-            <h3 className="tgslots-hero-title">{t("projects.tgslotsEmbedTitle")}</h3>
-            <StatusBadge status={isTgslots.status as ProjectStatus} />
-            <a
-              href={TGSLOTS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tgslots-play-link"
-            >
-              {t("projects.playLive")}
-            </a>
-          </div>
-          <p className="tgslots-hero-desc">{isTgslots.description}</p>
-          <TgslotsEmbed />
-        </div>
-      )}
+      <a className="workflow-preview reveal" href="https://github.com/lilter96/jobfinder-showcase" target="_blank" rel="noopener noreferrer">
+        <img src={`${import.meta.env.BASE_URL}images/jobfinder-workflow.png`} alt="JobFinder synthetic acceptance: revision conflict preserves the unsaved application draft" loading="lazy" />
+      </a>
 
       {/* ── Domain filters ────────────────────────────────── */}
       <div className="projects-filters reveal reveal-1" role="group" aria-label={t("projects.filterByDomain")}>
@@ -123,38 +102,6 @@ export function Projects() {
         )}
       </QueryState>
     </section>
-  );
-}
-
-/* ─────────────────────────────────────────────────────────────
-   TGSlots Live Embed
-   ───────────────────────────────────────────────────────────── */
-
-function TgslotsEmbed() {
-  const { t } = useTranslation();
-  const [embedOk, setEmbedOk] = useState(true);
-
-  return (
-    <div className="tgslots-embed-wrapper">
-      {embedOk ? (
-        <iframe
-          src={TGSLOTS_URL}
-          className="tgslots-iframe"
-          title={t("projects.tgslotsEmbedTitle")}
-          sandbox="allow-scripts allow-same-origin allow-forms"
-          loading="lazy"
-          onError={() => setEmbedOk(false)}
-        />
-      ) : (
-        <div className="tgslots-fallback">
-          <p>{t("projects.embedBlocked")}</p>
-          <a href={TGSLOTS_URL} target="_blank" rel="noopener noreferrer" className="project-link">
-            {t("projects.playLive")}
-          </a>
-        </div>
-      )}
-      <p className="tgslots-fallback-note">{t("projects.tgslotsFallback")}</p>
-    </div>
   );
 }
 

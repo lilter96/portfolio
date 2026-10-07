@@ -6,13 +6,19 @@
 [![Deploy Frontend](https://github.com/lilter96/portfolio/actions/workflows/deploy-frontend.yml/badge.svg)](https://github.com/lilter96/portfolio/actions/workflows/deploy-frontend.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
-A public monorepo demonstrating full-stack engineering — from infrastructure to user interface. Every
+A versioned portfolio content API and bilingual website demonstrating full-stack engineering — from infrastructure to user interface. Every
 commit, architectural decision, and line of code is crafted to be read, critiqued, and learned from.
 
 **Author:** Terentiy Gatsukov — Senior .NET Backend Developer, iGaming specialist
 **Live:** [lilter96.github.io/portfolio](https://lilter96.github.io/portfolio/) &nbsp;|&nbsp; **License:** [MIT](./LICENSE)
 
 ---
+
+## Verified scope
+
+The backend serves projects, experience, skills and contact requests; it is not a casino engine. GitHub Pages uses a curated static snapshot, so the public website works independently of an API deployment. The interactive contact form is available in API mode; Pages provides direct email and LinkedIn links.
+
+On 2026-10-07: **56 backend tests and 43 frontend tests passed**, with isolated PostgreSQL/Redis integration fixtures. Release build, frontend build and ESLint passed. GitHub Pages assets and CV links use the `/portfolio/` base path.
 
 ## Structure
 
@@ -81,7 +87,7 @@ Secrets are managed via [GitHub Actions secrets](https://docs.github.com/en/acti
 ## Guiding Principles
 
 - **Code as craft.** Every PR is a portfolio piece — readable, tested, and documented.
-- **Show, don't tell.** The slot demo proves iGaming domain expertise with real math and a real renderer.
+- **Show, don't tell.** Curated projects link to public source and verification evidence. The casino mathematics lives in [Slot Math Lab](https://github.com/lilter96/slot-math-lab) and [TGSlots](https://github.com/lilter96/tgslots).
 - **Decisions as artifacts.** ADRs explain the _why_, not just the _what_.
 - **Progressive disclosure.** The monorepo scaffolds complexity: simple at the root, depth in the leaves.
 - **Real-world ready.** Observability, security, and operational concerns are first-class, not afterthoughts.

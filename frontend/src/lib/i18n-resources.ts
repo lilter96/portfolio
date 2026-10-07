@@ -17,9 +17,9 @@ const en = {
   hero: {
     greeting: "Hello, I'm",
     name: "Terentiy Gatsukov",
-    role: "iGaming × .NET Backend × Real-Time Systems",
+    role: "Senior .NET Backend Engineer",
     tagline:
-      "I build slot engines, real-money pipelines, and crypto trading systems — the code behind the flashing lights, the money, and the math.",
+      "Durable workflows. Real-time resilience. Game mathematics. BIM automation. Public code with reproducible evidence.",
     cta: "View Work",
     contact: "Get in Touch",
     downloadCv: "Download CV",
@@ -27,16 +27,16 @@ const en = {
   about: {
     title: "About",
     intro:
-      "I'm a backend engineer based in Minsk, Belarus, working at the intersection of iGaming, .NET, and real-time systems. I don't build CRUD apps — I build slot-game backends, provably-fair RNG engines, real-money transaction pipelines, and crypto trading infrastructure. The code I write processes real money, powers live games, and runs under regulatory scrutiny.",
+      "I build backend services and engineering tools with C# and .NET. My public projects show how I handle difficult boundaries: durable state, concurrent streams, deterministic probability and model geometry.",
     customGames:
-      "At Custom Games Studio, I work as a Senior .NET Backend Developer on a multi-title casino backend platform built on the myKonami/Aristocrat stack. I design game logic engines, integrate RNG certification flows, and ship operator tooling for real-money casinos. The live proof: TGSlots, a social-casino Telegram Mini App I built end-to-end — deployed and playable right now.",
+      "Game engineering needs more than a renderer. Slot Math Lab explores exact probability and Monte Carlo execution; TGSlots turns game mathematics into a modular TypeScript/PixiJS application.",
     tgslotsLive:
-      "TGSlots is live at tgslots-marketing-production.up.railway.app — a social-casino Telegram Mini App with ASP.NET Core + SignalR + Hangfire, PostgreSQL + Redis, TON blockchain integration, and a Phaser + React + Zustand frontend. Click it. It works.",
+      "704 core tests in Slot Math Lab; 736 tests in TGSlots. Both are personal projects, with prototype limits documented in their READMEs.",
     fullstack:
-      "I work across the stack where it matters: .NET / ASP.NET Core / SignalR on the backend, React + TypeScript on the frontend, PostgreSQL + Redis for data. I build real-time multiplayer systems, crypto trading engines in F#, and Telegram Mini Apps with TON blockchain integration. My public GitHub repos back this up — every skill here is demonstrable.",
+      "JobFinder combines .NET 10, PostgreSQL, Wolverine, Blazor and typed LLM workflows. The portfolio adds React, Redis, Testcontainers and CI. AccessRoute and ModelGuard demonstrate Revit API and WPF/MVVM portfolio experience.",
     philosophy:
-      "I believe code is craft, and a portfolio should prove it. Every claim on this site links to evidence — a live URL, a public repo, or an honestly-framed NDA description. No invented metrics, no unverifiable numbers. Show, don't tell. Link, don't claim.",
-    tgslotsCta: "Open TGSlots ↗",
+      "Architecture, constraints, verification and final review are my responsibility. I use AI-assisted development and document what was tested, what remains experimental, and where a production claim would need more evidence.",
+    tgslotsCta: "Explore Slot Math Lab ↗",
   },
   design: {
     title: "Design System v1.0",
@@ -128,7 +128,7 @@ const en = {
   footer: {
     name: "Terentiy Gatsukov",
     role: "Senior .NET Backend Developer",
-    specialty: "iGaming Specialist",
+    specialty: "Backend · Real-Time · Game Math · BIM",
     builtWith: "Design System: \"Terminal Casino\" — Orbitron / Saira / JetBrains Mono",
   },
   theme: {
@@ -159,9 +159,9 @@ const ru: typeof en = {
   hero: {
     greeting: "Привет, я",
     name: "Терентий Гацуков",
-    role: "iGaming × .NET Backend × Real-Time системы",
+    role: "Senior .NET Backend Engineer",
     tagline:
-      "Я строю слотовые движки, real-money пайплайны и крипто-трейдинговые системы — код за огнями, деньгами и математикой.",
+      "Надёжные workflows. Потоковые системы. Игровая математика. BIM-автоматизация. Открытый код и воспроизводимые проверки.",
     cta: "Смотреть работы",
     contact: "Связаться",
     downloadCv: "Скачать резюме",
@@ -169,16 +169,16 @@ const ru: typeof en = {
   about: {
     title: "Обо мне",
     intro:
-      "Я бэкенд-инженер из Минска, работающий на пересечении iGaming, .NET и real-time систем. Я не строю CRUD — я создаю бэкенды слотов, доказуемо честные ГСЧ, платёжные пайплайны и крипто-трейдинговую инфраструктуру. Код, который я пишу, обрабатывает реальные деньги, работает в live-играх и проходит регуляторные проверки.",
+      "Я создаю backend-сервисы и инженерные инструменты на C# и .NET. В публичных проектах показываю работу со сложными границами: сохранением состояния, конкурентными потоками, вероятностями и геометрией моделей.",
     customGames:
-      "В Custom Games Studio я работаю Senior .NET Backend Developer на мульти-тайтловой казино-платформе на стеке myKonami/Aristocrat. Проектирую игровые движки, интегрирую процессы сертификации ГСЧ и создаю инструменты для операторов real-money казино. Живое доказательство: TGSlots, social-casino Telegram Mini App, который я построил от начала до конца — развёрнут и доступен прямо сейчас.",
+      "Игровая инженерия — это и математика, и продукт. Slot Math Lab исследует точные вероятности и Monte Carlo; TGSlots превращает игровую математику в модульное приложение на TypeScript и PixiJS.",
     tgslotsLive:
-      "TGSlots доступен на tgslots-marketing-production.up.railway.app — social-casino Telegram Mini App на ASP.NET Core + SignalR + Hangfire, PostgreSQL + Redis, интеграция с TON блокчейном и фронтенд на Phaser + React + Zustand. Кликните. Оно работает.",
+      "704 core-теста в Slot Math Lab; 736 тестов в TGSlots. Это личные проекты; ограничения прототипов описаны в README.",
     fullstack:
-      "Я работаю по стеку там, где это важно: .NET / ASP.NET Core / SignalR на бэкенде, React + TypeScript на фронтенде, PostgreSQL + Redis для данных. Строю real-time multiplayer системы, крипто-трейдинговые движки на F# и Telegram Mini Apps с интеграцией TON. Мои публичные репозитории на GitHub это подтверждают — каждый навык здесь можно проверить.",
+      "JobFinder объединяет .NET 10, PostgreSQL, Wolverine, Blazor и типизированные LLM-workflows. Portfolio добавляет React, Redis, Testcontainers и CI. AccessRoute и ModelGuard показывают практику Revit API и WPF/MVVM в портфолио.",
     philosophy:
-      "Я верю, что код — это ремесло, а портфолио должно это доказывать. Каждое утверждение на этом сайте подкреплено ссылкой — живой URL, публичный репозиторий или честное NDA-описание. Никаких выдуманных метрик, никаких непроверяемых цифр. Показывай, а не рассказывай. Ссылайся, а не утверждай.",
-    tgslotsCta: "Открыть TGSlots ↗",
+      "Архитектура, ограничения, проверка и финальное ревью — моя ответственность. Использую AI-assisted development и явно описываю, что проверено, что экспериментально и какие production-утверждения потребуют дополнительных доказательств.",
+    tgslotsCta: "Посмотреть Slot Math Lab ↗",
   },
   design: {
     title: "Design System v1.0",
@@ -270,7 +270,7 @@ const ru: typeof en = {
   footer: {
     name: "Терентий Гацуков",
     role: "Senior .NET Backend Developer",
-    specialty: "Специалист по iGaming",
+    specialty: "Backend · Real-Time · Game Math · BIM",
     builtWith: "Дизайн-система: \"Terminal Casino\" — Orbitron / Saira / JetBrains Mono",
   },
   theme: {

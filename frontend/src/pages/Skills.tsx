@@ -55,7 +55,7 @@ function SkillsGrid({ skills }: { skills: SkillDto[] }) {
   return (
     <div className="skills-grid" role="list">
       {entries.map(([category, items], ci) => {
-        const sorted = [...items].sort((a, b) => b.proficiency - a.proficiency);
+        const sorted = [...items].sort((a, b) => a.sortOrder - b.sortOrder);
         const accent = CATEGORY_ACCENTS[category] ?? "var(--color-primary)";
 
         return (
@@ -88,26 +88,6 @@ function SkillsGrid({ skills }: { skills: SkillDto[] }) {
                       </span>
                     )}
                   </span>
-                  <span className="skill-pct mono">{skill.proficiency}%</span>
-                </div>
-                <div
-                  className="skill-bar-track"
-                  role="progressbar"
-                  aria-valuenow={skill.proficiency}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-label={`${skill.name}: ${skill.proficiency}%`}
-                >
-                  <div
-                    className="skill-bar-fill"
-                    style={{
-                      width: `${skill.proficiency}%`,
-                      background:
-                        typeof accent === "string"
-                          ? `linear-gradient(90deg, ${accent}, ${accent}88)`
-                          : undefined,
-                    }}
-                  />
                 </div>
                 {skill.evidence && (
                   <p className="skill-evidence-text mono">{skill.evidence}</p>

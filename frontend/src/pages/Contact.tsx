@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
+import { isStaticShowcase } from "@/lib/runtime-config";
 import { submitContact } from "@/lib/api";
 
 interface FormErrors {
@@ -113,7 +114,7 @@ export function Contact() {
           </div>
         </div>
 
-        <form
+        {!isStaticShowcase && <form
           ref={formRef}
           className="contact-form reveal reveal-2"
           onSubmit={handleSubmit}
@@ -214,7 +215,7 @@ export function Contact() {
           >
             {mutation.isPending ? t("contact.sending") : t("contact.send")}
           </button>
-        </form>
+        </form>}
       </div>
     </section>
   );

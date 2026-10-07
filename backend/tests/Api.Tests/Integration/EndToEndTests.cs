@@ -57,8 +57,8 @@ namespace Portfolio.Api.Tests.Integration
             Assert.NotNull(projects);
             Assert.NotEmpty(projects);
             Assert.Contains(projects, p => p.Title.Contains("TGSlots", StringComparison.Ordinal));
-            Assert.Contains(projects, p => p.Title.Contains("Provably Fair", StringComparison.Ordinal));
-            Assert.Contains(projects, p => p.Title.Contains("crypto-exchange-rates", StringComparison.Ordinal));
+            Assert.Contains(projects, p => p.Title.Contains("Slot Math Lab", StringComparison.Ordinal));
+            Assert.Contains(projects, p => p.Title.Contains("JobFinder", StringComparison.Ordinal));
         }
 
         [Fact]
@@ -87,8 +87,8 @@ namespace Portfolio.Api.Tests.Integration
 
             Assert.NotNull(skills);
             Assert.NotEmpty(skills);
-            Assert.Contains(skills, s => s.Name == "C# / .NET");
-            Assert.Contains(skills, s => s.Name == "iGaming (Slots)");
+            Assert.Contains(skills, s => s.Name == "C# / .NET 10");
+            Assert.Contains(skills, s => s.Name == "Exact probability / Monte Carlo");
         }
 
         [Fact]

@@ -38,10 +38,10 @@ jobs:
         working-directory: frontend
 
       - name: Build for production
-        run: npm run build
+        run: npm run build -- --base=/portfolio/
         working-directory: frontend
         env:
-          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL || '' }}
+          VITE_STATIC_SHOWCASE: "true"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

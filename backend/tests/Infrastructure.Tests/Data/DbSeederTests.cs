@@ -70,7 +70,7 @@ namespace Portfolio.Infrastructure.Tests.Data
         {
             await _seeder.SeedAsync();
 
-            Assert.Equal(19, await _context.Skills.CountAsync());
+            Assert.Equal(9, await _context.Skills.CountAsync());
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace Portfolio.Infrastructure.Tests.Data
         {
             await _seeder.SeedAsync();
 
-            Assert.Equal(11, await _context.Projects.CountAsync());
+            Assert.Equal(7, await _context.Projects.CountAsync());
         }
     }
 }

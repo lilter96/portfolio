@@ -66,8 +66,8 @@ function App() {
         </button>
         <Hero />
         <About />
-        <Experience />
         <Projects />
+        <Experience />
         <Skills />
         <Contact />
       </Layout>
