@@ -163,7 +163,7 @@ namespace Portfolio.Infrastructure.Data.Seeding
 
                 new Project(
                     title: "TGSlots",
-                    description: "Modular TypeScript slot games, PixiJS rendering and Monte Carlo simulation tooling. 736 tests and lint passed. Bun/Elysia API prototype; simulation-runner typecheck needs follow-up.",
+                    description: "Modular TypeScript slot games, PixiJS rendering and Monte Carlo simulation tooling. 736 tests, all workspace typechecks and lint passed. Bun/Elysia API uses prototype in-memory state.",
                     url: null,
                     sourceUrl: "https://github.com/lilter96/tgslots",
                     technologies: ["TypeScript", "Bun", "Elysia", "PixiJS 8", "React"],
