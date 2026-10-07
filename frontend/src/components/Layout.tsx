@@ -25,7 +25,7 @@ export function Layout({ children, theme, onToggleTheme }: LayoutProps) {
           <a href={homeUrl} className="nav-brand mono" aria-label="TG — Home">
             TG<span className="nav-brand-dot">.</span>
           </a>
-          <div className="nav-links"><a href="#experience">{t("nav.experience")}</a><a href="#games">{t("nav.games")}</a><a href="#projects">{t("nav.projects")}</a><a href="#contact">{t("nav.contact")}</a></div>
+          <div className="nav-links"><a href="#experience">{t("nav.experience")}</a><a href="#showreel">{t("nav.games")}</a><a href="#projects">{t("nav.projects")}</a><a href="#contact">{t("nav.contact")}</a></div>
           <div className="nav-controls">
             {onToggleTheme && <button type="button" className="theme-toggle" onClick={onToggleTheme} aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}>{theme === "dark" ? "☀" : "☾"}</button>}
             <LanguageSwitcher />

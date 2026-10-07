@@ -6,6 +6,7 @@ import { About } from "@/pages/About";
 import { Experience } from "@/pages/Experience";
 import { Skills } from "@/pages/Skills";
 import { Projects } from "@/pages/Projects";
+import { GameShowcase } from "@/pages/GameShowcase";
 import { Games } from "@/pages/Games";
 import { Education } from "@/pages/Education";
 import { Contact } from "@/pages/Contact";
@@ -50,6 +51,7 @@ function App() {
         <Hero />
         <About />
         <Experience />
+        <GameShowcase />
         <Games />
         <Projects />
         <Skills />

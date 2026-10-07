@@ -59,7 +59,7 @@ jobs:
           VITE_STATIC_SHOWCASE: "true"
 
       - name: Verify current CV contacts and dates in both languages
-        run: npm run test:e2e -- e2e/profile-content.spec.ts --reporter=line
+        run: npm run test:e2e -- e2e/profile-content.spec.ts e2e/game-showcase.spec.ts --reporter=line
         working-directory: frontend
 
       - name: Upload coverage

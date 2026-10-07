@@ -1,5 +1,26 @@
 // Bilingual profile copy, based on the user-supplied CVs.
 const en = {
+  "showreel": {
+    "eyebrow": "PERSONAL PROJECT / REAL GAMEPLAY",
+    "title": "Game engines you can see in action",
+    "intro": "Three playable prototypes from TGSlots. Recorded from the running PixiJS client and local API, with real spins. Full captures preserve game audio. Promo edits pair real gameplay with a licensed cinematic score.",
+    "reel": "TGSlots · Gameplay reel",
+    "promo": "Promo edit",
+    "linkedin": "Download LinkedIn edit · 4:5",
+    "music": "Promo music:",
+    "musicEdits": "Edited excerpts with added game sound effects.",
+    "gameplay": "Full capture",
+    "source": "Explore the source",
+    "note": "Personal prototypes with demo credits. These recordings show my public game platform; commercial backend work is listed below.",
+    "choose": "Choose a game video",
+    "format": "Choose video format",
+    "fallback": "Your browser cannot play this video. Download the MP4.",
+    "dragon": "5 × 3 reels · 25 paylines · free-spin engine",
+    "woodland": "5 × 3 reels · 30 paylines · pick bonus · ×2 free spins",
+    "militare": "6 × 5 grid · combat cascades · persistent giant WILDs",
+    "reelDescription": "Three games. One shared platform. A short edit of real captured gameplay.",
+    "failure": "Video could not load. Open the MP4 directly."
+  },
   "nav": {
     "home": "Home",
     "projects": "Projects",
@@ -31,7 +52,7 @@ const en = {
     "title": "From transaction integrity to game mathematics",
     "intro": "My commercial work spans gaming and entertainment, e-commerce, transportation and IoT. I focus on distributed systems, financial correctness, resilience and performance, with frontend delivery experience.",
     "customGames": "C# / F#: probability monads, trampolines, unbiased RNG, the alias method and segment trees. 1B+ spin simulations, RTP, volatility, confidence intervals and reproducible replay.",
-    "tgslotsLive": "704 core tests in Slot Math Lab; 736 tests in TGSlots. Both are personal projects, with prototype limits documented in their READMEs.",
+    "tgslotsLive": "704 core tests in Slot Math Lab; 767 tests in TGSlots. Both are personal projects, with prototype limits documented in their READMEs.",
     "fullstack": "Event-driven architecture, CQRS, Outbox/Inbox and idempotency. Concurrent operations, distributed coordination, conditional updates and external-system integrations.",
     "philosophy": "I optimize memory and latency, use Roslyn generators and build observability. Claude, Cursor and Copilot assist implementation, refactoring and tests; architecture, verification and final review remain my responsibility.",
     "tgslotsCta": "Explore Slot Math Lab ↗",
@@ -174,6 +195,27 @@ const en = {
 };
 
 const ru: typeof en = {
+  "showreel": {
+    "eyebrow": "ЛИЧНЫЙ ПРОЕКТ / РЕАЛЬНЫЙ ГЕЙМПЛЕЙ",
+    "title": "Игровые движки в действии",
+    "intro": "Три игровых прототипа TGSlots. Запись работающего PixiJS-клиента и локального API: реальные спины. В полных записях сохранён игровой звук; в промо — лицензированная кинематографическая музыка.",
+    "reel": "TGSlots · Игровой шоурил",
+    "promo": "Промо-монтаж",
+    "linkedin": "Скачать для LinkedIn · 4:5",
+    "music": "Музыка промо:",
+    "musicEdits": "Монтаж фрагментов с добавленными игровыми эффектами.",
+    "gameplay": "Полная запись",
+    "source": "Посмотреть исходники",
+    "note": "Личные прототипы с демо-кредитами. Здесь — моя публичная игровая платформа; коммерческий backend-опыт представлен ниже.",
+    "choose": "Выбрать видео игры",
+    "format": "Выбрать формат видео",
+    "fallback": "Браузер не воспроизводит видео. Скачать MP4.",
+    "dragon": "Барабаны 5 × 3 · 25 линий · движок фриспинов",
+    "woodland": "Барабаны 5 × 3 · 30 линий · pick-бонус · фриспины ×2",
+    "militare": "Поле 6 × 5 · боевые каскады · закреплённые гигантские WILD",
+    "reelDescription": "Три игры. Одна общая платформа. Короткий монтаж реального геймплея.",
+    "failure": "Видео не загрузилось. Открыть MP4 напрямую."
+  },
   "nav": {
     "home": "Главная",
     "projects": "Проекты",
@@ -205,7 +247,7 @@ const ru: typeof en = {
     "title": "От целостности данных до игровой математики",
     "intro": "Мой коммерческий опыт — Gaming & Entertainment, E-commerce, Transportation Tech и IoT. Работаю с распределёнными системами, финансовой корректностью, отказоустойчивостью и производительностью. Есть опыт frontend-разработки.",
     "customGames": "C# / F#: монады вероятностей, trampolines, unbiased RNG, alias method и segment trees. Симуляции 1B+ вращений, RTP, волатильность, доверительные интервалы и воспроизводимый replay.",
-    "tgslotsLive": "704 core-теста в Slot Math Lab; 736 тестов в TGSlots. Это личные проекты; ограничения прототипов описаны в README.",
+    "tgslotsLive": "704 core-теста в Slot Math Lab; 767 тестов в TGSlots. Это личные проекты; ограничения прототипов описаны в README.",
     "fullstack": "Event-driven архитектура, CQRS, Outbox/Inbox и идемпотентность. Конкурентные операции, распределённые блокировки, условные обновления и интеграции с внешними системами.",
     "philosophy": "Оптимизирую память и задержки, использую Roslyn-генераторы и наблюдаемость. Claude, Cursor и Copilot помогают в реализации, рефакторинге и тестах; архитектура, проверка и финальное ревью остаются моей ответственностью.",
     "tgslotsCta": "Посмотреть Slot Math Lab ↗",
