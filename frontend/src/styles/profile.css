@@ -209,7 +209,7 @@ section[id] { scroll-margin-top: 100px; }
 }
 .showreel-picker {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   margin-top: 20px;
 }
@@ -290,6 +290,9 @@ section[id] { scroll-margin-top: 100px; }
   .showreel-picker {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+  .showreel-picker .showreel-choice:first-child {
+    grid-column: 1 / -1;
   }
   .showreel-detail {
     padding: 18px;

@@ -6,7 +6,14 @@ const clips = [
     id: "tgslots-reel",
     title: "TGSlots",
     description: "reelDescription",
-    duration: "0:37",
+    duration: "0:45",
+    fullDuration: "0:45",
+  },
+  {
+    id: "x7-club",
+    title: "X7 Club",
+    description: "club",
+    duration: "0:17",
     fullDuration: "0:37",
   },
   {

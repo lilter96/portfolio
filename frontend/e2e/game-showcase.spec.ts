@@ -14,7 +14,7 @@ test("game showcase waits for playback intent and switches real clips", async ({
   await expect(player).toHaveAttribute("playsinline", "");
   expect(await player.getAttribute("autoplay")).toBeNull();
   expect(requests).toHaveLength(0);
-  for (const game of ["Ancient Dragon", "Woodland Whisper", "Le Militare"]) {
+  for (const game of ["X7 Club", "Ancient Dragon", "Woodland Whisper", "Le Militare"]) {
     await section.getByRole("button", { name: game, exact: true }).click();
     await expect(section.getByRole("heading", { name: game })).toBeVisible();
     await player.evaluate(async (video: HTMLVideoElement) => {

@@ -1,14 +1,15 @@
 // Bilingual profile copy, based on the user-supplied CVs.
 const en = {
   "showreel": {
+    "club": "Hold & Spin, persistent coins and full-column boosters. Go server with a RabbitMQ-backed math worker.",
     "eyebrow": "PERSONAL PROJECT / REAL GAMEPLAY",
     "title": "Game engines you can see in action",
-    "intro": "Three playable prototypes from TGSlots. Recorded from the running PixiJS client and local API, with real spins. Full captures preserve game audio. Promo edits pair real gameplay with a licensed cinematic score.",
+    "intro": "Four playable TGSlots prototypes. Real gameplay captured from the running PixiJS clients and local backends. Promo edits use licensed music without game sound effects.",
     "reel": "TGSlots · Gameplay reel",
     "promo": "Promo edit",
     "linkedin": "Download LinkedIn edit · 4:5",
     "music": "Promo music:",
-    "musicEdits": "Edited excerpts with added game sound effects.",
+    "musicEdits": "Edited music excerpts. No game sound effects.",
     "gameplay": "Full capture",
     "source": "Explore the source",
     "note": "Personal prototypes with demo credits. These recordings show my public game platform; commercial backend work is listed below.",
@@ -18,7 +19,7 @@ const en = {
     "dragon": "5 × 3 reels · 25 paylines · free-spin engine",
     "woodland": "5 × 3 reels · 30 paylines · pick bonus · ×2 free spins",
     "militare": "6 × 5 grid · combat cascades · persistent giant WILDs",
-    "reelDescription": "Three games. One shared platform. A short edit of real captured gameplay.",
+    "reelDescription": "Four games. One shared platform. A short edit of real captured gameplay.",
     "failure": "Video could not load. Open the MP4 directly."
   },
   "nav": {
@@ -196,14 +197,15 @@ const en = {
 
 const ru: typeof en = {
   "showreel": {
+    "club": "Hold & Spin, закреплённые монеты и бустеры заполненных колонок. Go-сервер и математический worker через RabbitMQ.",
     "eyebrow": "ЛИЧНЫЙ ПРОЕКТ / РЕАЛЬНЫЙ ГЕЙМПЛЕЙ",
     "title": "Игровые движки в действии",
-    "intro": "Три игровых прототипа TGSlots. Запись работающего PixiJS-клиента и локального API: реальные спины. В полных записях сохранён игровой звук; в промо — лицензированная кинематографическая музыка.",
+    "intro": "Четыре игровых прототипа TGSlots. Реальный геймплей работающих PixiJS-клиентов и локальных backend. В промо — лицензированная музыка без игровых звуков.",
     "reel": "TGSlots · Игровой шоурил",
     "promo": "Промо-монтаж",
     "linkedin": "Скачать для LinkedIn · 4:5",
     "music": "Музыка промо:",
-    "musicEdits": "Монтаж фрагментов с добавленными игровыми эффектами.",
+    "musicEdits": "Смонтированные музыкальные фрагменты. Без игровых звуков.",
     "gameplay": "Полная запись",
     "source": "Посмотреть исходники",
     "note": "Личные прототипы с демо-кредитами. Здесь — моя публичная игровая платформа; коммерческий backend-опыт представлен ниже.",
@@ -213,7 +215,7 @@ const ru: typeof en = {
     "dragon": "Барабаны 5 × 3 · 25 линий · движок фриспинов",
     "woodland": "Барабаны 5 × 3 · 30 линий · pick-бонус · фриспины ×2",
     "militare": "Поле 6 × 5 · боевые каскады · закреплённые гигантские WILD",
-    "reelDescription": "Три игры. Одна общая платформа. Короткий монтаж реального геймплея.",
+    "reelDescription": "Четыре игры. Одна общая платформа. Короткий монтаж реального геймплея.",
     "failure": "Видео не загрузилось. Открыть MP4 напрямую."
   },
   "nav": {
