@@ -20,3 +20,5 @@ Updated on 2026-10-07 from two CVs supplied by the profile owner. The owner requ
 ## Verification
 
 Frontend: 43 tests, strict TypeScript build and ESLint. Backend: 56 tests using disposable PostgreSQL/Redis fixtures. Two committed Playwright profile checks run in CI. Additional browser verification covers both languages, desktop/mobile layout, contact destinations and byte-identical CV downloads.
+
+The backend coverage gate merges executable lines from all four test-project reports. All 56 tests participate in collection; empty reports no longer determine the result by directory order. The 30% threshold is retained. On the local Release verification, merged line coverage was 1,987/2,219 (89.5%).
