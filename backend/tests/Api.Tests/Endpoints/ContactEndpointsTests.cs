@@ -2,17 +2,22 @@ namespace Portfolio.Api.Tests.Endpoints
 {
     using System.Net;
     using System.Net.Http.Json;
+    using Portfolio.Api.Tests.Integration;
 
     /// <summary>
     /// Integration tests for the contact form endpoint.
-    /// Runs against a running API instance.
+    /// Uses an isolated test host with PostgreSQL and Redis containers.
     /// </summary>
-    public sealed class ContactEndpointsTests
+    [Collection("Integration")]
+    public sealed class ContactEndpointsTests : IClassFixture<PortfolioApiFactory>
     {
-        private static readonly HttpClient Client = new()
+        private readonly HttpClient _client;
+
+        public ContactEndpointsTests(PortfolioApiFactory factory)
         {
-            BaseAddress = new Uri("http://localhost:5121")
-        };
+            ArgumentNullException.ThrowIfNull(factory);
+            _client = factory.CreateClient();
+        }
 
         [Fact]
         public async Task SubmitContact_ValidRequest_Returns200()
@@ -24,7 +29,7 @@ namespace Portfolio.Api.Tests.Endpoints
                 message = "Hello, this is a test message from the contact form."
             };
 
-            var response = await Client.PostAsJsonAsync("/api/v1/contact", request);
+            var response = await _client.PostAsJsonAsync("/api/v1/contact", request);
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
@@ -43,7 +48,7 @@ namespace Portfolio.Api.Tests.Endpoints
                 message = "Hello, this is a test message."
             };
 
-            var response = await Client.PostAsJsonAsync("/api/v1/contact", request);
+            var response = await _client.PostAsJsonAsync("/api/v1/contact", request);
 
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }
@@ -58,7 +63,7 @@ namespace Portfolio.Api.Tests.Endpoints
                 message = "Hello, this is a test message."
             };
 
-            var response = await Client.PostAsJsonAsync("/api/v1/contact", request);
+            var response = await _client.PostAsJsonAsync("/api/v1/contact", request);
 
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }
@@ -73,7 +78,7 @@ namespace Portfolio.Api.Tests.Endpoints
                 message = "Short"
             };
 
-            var response = await Client.PostAsJsonAsync("/api/v1/contact", request);
+            var response = await _client.PostAsJsonAsync("/api/v1/contact", request);
 
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }
@@ -89,7 +94,7 @@ namespace Portfolio.Api.Tests.Endpoints
                 website = "http://spam.com"
             };
 
-            var response = await Client.PostAsJsonAsync("/api/v1/contact", request);
+            var response = await _client.PostAsJsonAsync("/api/v1/contact", request);
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 

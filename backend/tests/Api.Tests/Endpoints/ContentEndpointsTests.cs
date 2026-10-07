@@ -2,24 +2,28 @@ namespace Portfolio.Api.Tests.Endpoints
 {
     using System.Net;
     using System.Net.Http.Json;
+    using Portfolio.Api.Tests.Integration;
     using Portfolio.Application.Dtos;
 
     /// <summary>
     /// Smoke tests for content endpoints (Projects, Experience, Skills).
-    /// Runs against a running API instance. Start the API with:
-    /// <c>dotnet run --project src/Api</c> before running these tests.
+    /// Uses an isolated test host with PostgreSQL and Redis containers.
     /// </summary>
-    public sealed class ContentEndpointsTests
+    [Collection("Integration")]
+    public sealed class ContentEndpointsTests : IClassFixture<PortfolioApiFactory>
     {
-        private static readonly HttpClient Client = new()
+        private readonly HttpClient _client;
+
+        public ContentEndpointsTests(PortfolioApiFactory factory)
         {
-            BaseAddress = new Uri("http://localhost:5121")
-        };
+            ArgumentNullException.ThrowIfNull(factory);
+            _client = factory.CreateClient();
+        }
 
         [Fact]
         public async Task GetProjects_ReturnsOkWithValidDtos()
         {
-            var response = await Client.GetAsync("/api/v1/projects");
+            var response = await _client.GetAsync("/api/v1/projects");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
@@ -39,10 +43,10 @@ namespace Portfolio.Api.Tests.Endpoints
         [Fact]
         public async Task GetProjectById_ReturnsProject()
         {
-            var list = await Client.GetFromJsonAsync<List<ProjectDto>>("/api/v1/projects");
+            var list = await _client.GetFromJsonAsync<List<ProjectDto>>("/api/v1/projects");
             var firstId = list![0].Id;
 
-            var project = await Client.GetFromJsonAsync<ProjectDto>($"/api/v1/projects/{firstId}");
+            var project = await _client.GetFromJsonAsync<ProjectDto>($"/api/v1/projects/{firstId}");
 
             Assert.NotNull(project);
             Assert.Equal(firstId, project.Id);
@@ -51,7 +55,7 @@ namespace Portfolio.Api.Tests.Endpoints
         [Fact]
         public async Task GetProjectById_NotFound_Returns404()
         {
-            var response = await Client.GetAsync($"/api/v1/projects/{Guid.NewGuid()}");
+            var response = await _client.GetAsync($"/api/v1/projects/{Guid.NewGuid()}");
 
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
@@ -59,7 +63,7 @@ namespace Portfolio.Api.Tests.Endpoints
         [Fact]
         public async Task GetExperience_ReturnsOkWithValidDtos()
         {
-            var response = await Client.GetAsync("/api/v1/experience");
+            var response = await _client.GetAsync("/api/v1/experience");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
@@ -78,7 +82,7 @@ namespace Portfolio.Api.Tests.Endpoints
         [Fact]
         public async Task GetSkills_ReturnsOkWithValidDtos()
         {
-            var response = await Client.GetAsync("/api/v1/skills");
+            var response = await _client.GetAsync("/api/v1/skills");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
