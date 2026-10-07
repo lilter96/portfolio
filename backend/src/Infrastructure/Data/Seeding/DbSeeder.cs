@@ -27,7 +27,7 @@ namespace Portfolio.Infrastructure.Data.Seeding
         private async Task SeedUsersAsync(CancellationToken cancellationToken)
         {
             if (await _context.Users.AnyAsync(cancellationToken)) return;
-            _context.Users.Add(new User("terentiy.gatsukov@gmail.com", "Terentiy Gatsukov"));
+            _context.Users.Add(new User("lilter96dotnet@gmail.com", "Terentiy Gatsukov"));
             _logger.LogInformation("Seeded users");
         }
 
@@ -36,55 +36,11 @@ namespace Portfolio.Infrastructure.Data.Seeding
             if (await _context.Experiences.AnyAsync(cancellationToken)) return;
 
             _context.Experiences.AddRange(
-                new Experience(
-                    "Custom Games Studio",
-                    "Senior .NET Backend Developer",
-                    "Backend development for casino slot games on the myKonami/Aristocrat platform. "
-                    + "Designed game logic engines, real-money transaction pipelines, and operator "
-                    + "tooling for a multi-title casino backend platform. Integrated RNG certification "
-                    + "flows and jurisdictional compliance requirements.",
-                    new DateOnly(2022, 9, 1),
-                    null),
+                new Experience("Custom Games Studio", ".NET Developer", "Game backend platform for myKONAMI: 5M+ users. Full game backends, shared mathematics and simulation infrastructure.", new DateOnly(2023, 11, 1), new DateOnly(2026, 7, 1)),
 
-                new Experience(
-                    "Solvintech",
-                    "Fullstack Developer (.NET + React)",
-                    "Developed and maintained web applications across the full stack. "
-                    + "Built REST APIs with ASP.NET Core and interactive UIs with React and TypeScript. "
-                    + "Worked on real-time features, database design, and CI/CD pipelines.",
-                    new DateOnly(2021, 6, 1),
-                    new DateOnly(2022, 8, 31)),
+                new Experience("Solvintech", "C# / .NET Developer", "MPsklad marketplace SaaS: Ozon, Wildberries, Yandex Market and MoySklad; 50k+ orders/day.", new DateOnly(2022, 7, 1), new DateOnly(2023, 10, 1)),
 
-                new Experience(
-                    "Elgrow",
-                    "Software Developer",
-                    "Contributed to commercial software projects using .NET and related technologies.",
-                    new DateOnly(2020, 3, 1),
-                    new DateOnly(2021, 5, 31)),
-
-                new Experience(
-                    "Syberry CIS",
-                    "Software Developer",
-                    "Worked on enterprise client projects. Gained experience in full-cycle development, "
-                    + "code review, and agile team practices.",
-                    new DateOnly(2019, 1, 1),
-                    new DateOnly(2020, 2, 28)),
-
-                new Experience(
-                    "Softeq",
-                    "Junior Developer",
-                    "Started professional career. Built foundational skills in software engineering "
-                    + "practices and team collaboration.",
-                    new DateOnly(2018, 3, 1),
-                    new DateOnly(2018, 12, 31)),
-
-                new Experience(
-                    "BSUIR",
-                    "BSc Engineering",
-                    "Belarusian State University of Informatics and Radioelectronics. "
-                    + "Foundation in computer science, algorithms, and software engineering.",
-                    new DateOnly(2019, 9, 1),
-                    new DateOnly(2023, 6, 30)));
+                new Experience("Elgrow", "C# / .NET Developer", "Smart parking for Domodedovo Airport: 1,000+ spaces and 10,000+ users. Booking, payments and equipment integration.", new DateOnly(2021, 1, 1), new DateOnly(2022, 6, 1)));
 
             _logger.LogInformation("Seeded experience");
         }
@@ -95,15 +51,19 @@ namespace Portfolio.Infrastructure.Data.Seeding
 
             // Evidence replaces arbitrary percentage claims; 0 means no self-rating supplied.
             _context.Skills.AddRange(
-                new Skill("C# / .NET 10", "Backend", 0, 0, "JobFinder: durable workflows, typed contracts; Realtime Primitives: concurrency and bounded buffers."),
-                new Skill("ASP.NET Core / Wolverine", "Backend", 0, 1, "JobFinder: PostgreSQL transport and transactional outbox; Portfolio: versioned endpoints and rate limiting."),
-                new Skill("PostgreSQL / EF Core", "Data", 0, 2, "JobFinder: revision witnesses and reconciliation; Portfolio: isolated database integration tests."),
-                new Skill("Redis", "Data", 0, 3, "Portfolio: caching and container-based integration tests."),
-                new Skill("Exact probability / Monte Carlo", "Domain", 0, 4, "Slot Math Lab: exact rational interpreter and seeded simulation; TGSlots: game math tests."),
-                new Skill("Revit API / WPF / MVVM", "Domain", 0, 5, "AccessRoute and ModelGuard: core/ViewModel tests; Revit host verification pending."),
-                new Skill("React / TypeScript / PixiJS", "Frontend", 0, 6, "Portfolio: bilingual UI and 43 tests; TGSlots: PixiJS renderer and modular games."),
-                new Skill("Docker / Testcontainers / CI", "DevOps", 0, 7, "JobFinder: real PostgreSQL/process-boundary tests; Portfolio: PostgreSQL + Redis fixtures."),
-                new Skill("AI-assisted engineering", "Practices", 0, 8, "Versioned LLM recipes, architecture decisions, test/review workflows and explicit verification boundaries."));
+                new Skill("C# / .NET / ASP.NET Core", "Backend", 0, 0, "Production backend engineering across gaming, e-commerce and transportation."),
+                new Skill("Distributed Systems / CQRS / Outbox / Inbox", "Backend", 0, 1, "Transactional consistency, idempotency, asynchronous delivery and separate read/write models."),
+                new Skill("REST / gRPC / WebSockets / SignalR", "Backend", 0, 2, "Service contracts, mobile APIs and real-time delivery."),
+                new Skill("PostgreSQL / MS SQL Server / EF Core / Dapper", "Data", 0, 3, "Order consistency, conditional financial updates and transactional persistence."),
+                new Skill("Couchbase / MongoDB / Redis", "Data", 0, 4, "Distributed profile state, read models, coordination, rate limits and caching."),
+                new Skill("Kafka / RabbitMQ / MassTransit / Hangfire", "Messaging", 0, 5, "Ordered events, background marketplace integrations and equipment isolation."),
+                new Skill("C# / F# game mathematics", "Game engineering", 0, 6, "Probability monads, trampolines, exact enumeration, unbiased RNG, alias method and segment trees."),
+                new Skill("RTP / volatility / Monte Carlo", "Game engineering", 0, 7, "1B+ spin simulations, confidence intervals, distribution checks, checkpoints and deterministic replay."),
+                new Skill("Span<T> / ArrayPool<T> / Roslyn", "Performance", 0, 8, "Allocation/GC optimization, readonly structs and compile-time serialization."),
+                new Skill("React / TypeScript / MobX", "Frontend", 0, 9, "Commercial frontend delivery and generated C# / TypeScript contracts."),
+                new Skill("Docker / Kubernetes / Linux / CI/CD", "Infrastructure", 0, 10, "Containerized delivery, development environments and integration verification."),
+                new Skill("OpenTelemetry / Prometheus / Grafana", "Infrastructure", 0, 11, "Distributed-system observability and production incident analysis."),
+                new Skill("xUnit / Testcontainers / AI-assisted development", "Practices", 0, 12, "Behavioral and integration tests; Claude, Cursor and Copilot for implementation, refactoring and test generation."));
 
             _logger.LogInformation("Seeded skills");
         }
@@ -195,6 +155,30 @@ namespace Portfolio.Infrastructure.Data.Seeding
                     status: ProjectStatus.OpenSource,
                     role: "Personal engineering project",
                     evidenceUrl: "https://github.com/lilter96/model-guard-revit/blob/main/README.md",
+                    domain: ProjectDomain.Fullstack),
+
+                new Project(
+                    title: "Trading Systems Lab",
+                    description: "C#/.NET and Go execution boundaries: protobuf/gRPC contracts, order state, PostgreSQL audit immutability and an independent emergency watchdog. 151 .NET tests passed, one optional benchmark skipped; Go watchdog tests passed. Live exchange behavior unverified.",
+                    url: null,
+                    sourceUrl: "https://github.com/lilter96/trading-systems-lab",
+                    technologies: ["C#", "Go", "gRPC", "PostgreSQL", "Resilience"],
+                    sortOrder: 7,
+                    status: ProjectStatus.OpenSource,
+                    role: "Personal engineering project",
+                    evidenceUrl: "https://github.com/lilter96/trading-systems-lab/blob/main/README.md",
+                    domain: ProjectDomain.RealTime),
+
+                new Project(
+                    title: "Signal Processing Lab",
+                    description: "Python asynchronous signal processing with typed LLM/media parsing, SQLite campaigns, dry-run execution and risk invariants. 340 offline tests passed. Sanitized research snapshot; live providers and screener acceptance unverified.",
+                    url: null,
+                    sourceUrl: "https://github.com/lilter96/signal-processing-lab",
+                    technologies: ["Python", "Asyncio", "LLM", "SQLite", "Testing"],
+                    sortOrder: 8,
+                    status: ProjectStatus.OpenSource,
+                    role: "Personal engineering project",
+                    evidenceUrl: "https://github.com/lilter96/signal-processing-lab/blob/main/README.md",
                     domain: ProjectDomain.Fullstack));
 
             _logger.LogInformation("Seeded projects");

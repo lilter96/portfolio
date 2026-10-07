@@ -1,4 +1,4 @@
-/* Curated public-source evidence. The employment timeline preserves the existing public seed. */
+/* Curated public-source evidence. Employment and skills follow the user-supplied CVs. */
 import type { ProjectDto, ExperienceDto, SkillDto } from "@/types/api";
 
 export const showcaseProjects: ProjectDto[] = [
@@ -132,131 +132,47 @@ export const showcaseProjects: ProjectDto[] = [
     "role": "Personal engineering project",
     "evidenceUrl": "https://github.com/lilter96/model-guard-revit/blob/main/README.md",
     "domain": "BIM"
-  }
-];
-
-export const showcaseExperience: ExperienceDto[] = [
-  {
-    "id": "experience-0",
-    "company": "Custom Games Studio",
-    "role": "Senior .NET Backend Developer",
-    "description": "Backend development for casino slot games on the myKonami/Aristocrat platform. Designed game logic engines, real-money transaction pipelines, and operator tooling for a multi-title casino backend platform. Integrated RNG certification flows and jurisdictional compliance requirements.",
-    "startDate": "2022-09-01",
-    "endDate": null
   },
   {
-    "id": "experience-1",
-    "company": "Solvintech",
-    "role": "Fullstack Developer (.NET + React)",
-    "description": "Developed and maintained web applications across the full stack. Built REST APIs with ASP.NET Core and interactive UIs with React and TypeScript. Worked on real-time features, database design, and CI/CD pipelines.",
-    "startDate": "2021-06-01",
-    "endDate": "2022-08-31"
-  },
-  {
-    "id": "experience-2",
-    "company": "Elgrow",
-    "role": "Software Developer",
-    "description": "Contributed to commercial software projects using .NET and related technologies.",
-    "startDate": "2020-03-01",
-    "endDate": "2021-05-31"
-  },
-  {
-    "id": "experience-3",
-    "company": "Syberry CIS",
-    "role": "Software Developer",
-    "description": "Worked on enterprise client projects. Gained experience in full-cycle development, code review, and agile team practices.",
-    "startDate": "2019-01-01",
-    "endDate": "2020-02-28"
-  },
-  {
-    "id": "experience-4",
-    "company": "Softeq",
-    "role": "Junior Developer",
-    "description": "Started professional career. Built foundational skills in software engineering practices and team collaboration.",
-    "startDate": "2018-03-01",
-    "endDate": "2018-12-31"
-  },
-  {
-    "id": "experience-5",
-    "company": "BSUIR",
-    "role": "BSc Engineering",
-    "description": "Belarusian State University of Informatics and Radioelectronics. Foundation in computer science, algorithms, and software engineering.",
-    "startDate": "2019-09-01",
-    "endDate": "2023-06-30"
-  }
-];
-
-export const showcaseSkills: SkillDto[] = [
-  {
-    "id": "skill-0",
-    "name": "C# / .NET 10",
-    "category": "Backend",
-    "proficiency": 0,
-    "sortOrder": 0,
-    "evidence": "JobFinder: durable workflows, typed contracts; Realtime Primitives: concurrency and bounded buffers."
-  },
-  {
-    "id": "skill-1",
-    "name": "ASP.NET Core / Wolverine",
-    "category": "Backend",
-    "proficiency": 0,
-    "sortOrder": 1,
-    "evidence": "JobFinder: PostgreSQL transport and transactional outbox; Portfolio: versioned endpoints and rate limiting."
-  },
-  {
-    "id": "skill-2",
-    "name": "PostgreSQL / EF Core",
-    "category": "Data",
-    "proficiency": 0,
-    "sortOrder": 2,
-    "evidence": "JobFinder: revision witnesses and reconciliation; Portfolio: isolated database integration tests."
-  },
-  {
-    "id": "skill-3",
-    "name": "Redis",
-    "category": "Data",
-    "proficiency": 0,
-    "sortOrder": 3,
-    "evidence": "Portfolio: caching and container-based integration tests."
-  },
-  {
-    "id": "skill-4",
-    "name": "Exact probability / Monte Carlo",
-    "category": "Domain",
-    "proficiency": 0,
-    "sortOrder": 4,
-    "evidence": "Slot Math Lab: exact rational interpreter and seeded simulation; TGSlots: game math tests."
-  },
-  {
-    "id": "skill-5",
-    "name": "Revit API / WPF / MVVM",
-    "category": "Domain",
-    "proficiency": 0,
-    "sortOrder": 5,
-    "evidence": "AccessRoute and ModelGuard: core/ViewModel tests; Revit host verification pending."
-  },
-  {
-    "id": "skill-6",
-    "name": "React / TypeScript / PixiJS",
-    "category": "Frontend",
-    "proficiency": 0,
-    "sortOrder": 6,
-    "evidence": "Portfolio: bilingual UI and 43 tests; TGSlots: PixiJS renderer and modular games."
-  },
-  {
-    "id": "skill-7",
-    "name": "Docker / Testcontainers / CI",
-    "category": "DevOps",
-    "proficiency": 0,
+    "id": "trading-systems-lab",
+    "title": "Trading Systems Lab",
+    "description": "C#/.NET and Go execution boundaries: protobuf/gRPC contracts, order state, PostgreSQL audit immutability and an independent emergency watchdog. 151 .NET tests passed, one optional benchmark skipped; Go watchdog tests passed. Live exchange behavior unverified.",
+    "url": null,
+    "sourceUrl": "https://github.com/lilter96/trading-systems-lab",
+    "technologies": [
+      "C#",
+      "Go",
+      "gRPC",
+      "PostgreSQL",
+      "Resilience"
+    ],
     "sortOrder": 7,
-    "evidence": "JobFinder: real PostgreSQL/process-boundary tests; Portfolio: PostgreSQL + Redis fixtures."
+    "status": "OpenSource",
+    "role": "Personal engineering project",
+    "evidenceUrl": "https://github.com/lilter96/trading-systems-lab/blob/main/README.md",
+    "domain": "RealTime"
   },
   {
-    "id": "skill-8",
-    "name": "AI-assisted engineering",
-    "category": "Practices",
-    "proficiency": 0,
+    "id": "signal-processing-lab",
+    "title": "Signal Processing Lab",
+    "description": "Python asynchronous signal processing with typed LLM/media parsing, SQLite campaigns, dry-run execution and risk invariants. 340 offline tests passed. Sanitized research snapshot; live providers and screener acceptance unverified.",
+    "url": null,
+    "sourceUrl": "https://github.com/lilter96/signal-processing-lab",
+    "technologies": [
+      "Python",
+      "Asyncio",
+      "LLM",
+      "SQLite",
+      "Testing"
+    ],
     "sortOrder": 8,
-    "evidence": "Versioned LLM recipes, architecture decisions, test/review workflows and explicit verification boundaries."
+    "status": "OpenSource",
+    "role": "Personal engineering project",
+    "evidenceUrl": "https://github.com/lilter96/signal-processing-lab/blob/main/README.md",
+    "domain": "Workflow"
   }
 ];
+
+export const showcaseExperience: ExperienceDto[] = [{"id": "custom-games-studio", "company": "Custom Games Studio", "role": ".NET Developer", "description": "Game backend platform for myKONAMI: 5M+ users. Full game backends, shared mathematics and simulation infrastructure.", "startDate": "2023-11-01", "endDate": "2026-07-01"}, {"id": "solvintech", "company": "Solvintech", "role": "C# / .NET Developer", "description": "MPsklad marketplace SaaS: Ozon, Wildberries, Yandex Market and MoySklad; 50k+ orders/day.", "startDate": "2022-07-01", "endDate": "2023-10-01"}, {"id": "elgrow", "company": "Elgrow", "role": "C# / .NET Developer", "description": "Smart parking for Domodedovo Airport: 1,000+ spaces and 10,000+ users. Booking, payments and equipment integration.", "startDate": "2021-01-01", "endDate": "2022-06-01"}];
+
+export const showcaseSkills: SkillDto[] = [{"id": "resume-skill-0", "name": "C# / .NET / ASP.NET Core", "category": "Backend", "proficiency": 0, "sortOrder": 0, "evidence": "Production backend engineering across gaming, e-commerce and transportation."}, {"id": "resume-skill-1", "name": "Distributed Systems / CQRS / Outbox / Inbox", "category": "Backend", "proficiency": 0, "sortOrder": 1, "evidence": "Transactional consistency, idempotency, asynchronous delivery and separate read/write models."}, {"id": "resume-skill-2", "name": "REST / gRPC / WebSockets / SignalR", "category": "Backend", "proficiency": 0, "sortOrder": 2, "evidence": "Service contracts, mobile APIs and real-time delivery."}, {"id": "resume-skill-3", "name": "PostgreSQL / MS SQL Server / EF Core / Dapper", "category": "Data", "proficiency": 0, "sortOrder": 3, "evidence": "Order consistency, conditional financial updates and transactional persistence."}, {"id": "resume-skill-4", "name": "Couchbase / MongoDB / Redis", "category": "Data", "proficiency": 0, "sortOrder": 4, "evidence": "Distributed profile state, read models, coordination, rate limits and caching."}, {"id": "resume-skill-5", "name": "Kafka / RabbitMQ / MassTransit / Hangfire", "category": "Messaging", "proficiency": 0, "sortOrder": 5, "evidence": "Ordered events, background marketplace integrations and equipment isolation."}, {"id": "resume-skill-6", "name": "C# / F# game mathematics", "category": "Game engineering", "proficiency": 0, "sortOrder": 6, "evidence": "Probability monads, trampolines, exact enumeration, unbiased RNG, alias method and segment trees."}, {"id": "resume-skill-7", "name": "RTP / volatility / Monte Carlo", "category": "Game engineering", "proficiency": 0, "sortOrder": 7, "evidence": "1B+ spin simulations, confidence intervals, distribution checks, checkpoints and deterministic replay."}, {"id": "resume-skill-8", "name": "Span<T> / ArrayPool<T> / Roslyn", "category": "Performance", "proficiency": 0, "sortOrder": 8, "evidence": "Allocation/GC optimization, readonly structs and compile-time serialization."}, {"id": "resume-skill-9", "name": "React / TypeScript / MobX", "category": "Frontend", "proficiency": 0, "sortOrder": 9, "evidence": "Commercial frontend delivery and generated C# / TypeScript contracts."}, {"id": "resume-skill-10", "name": "Docker / Kubernetes / Linux / CI/CD", "category": "Infrastructure", "proficiency": 0, "sortOrder": 10, "evidence": "Containerized delivery, development environments and integration verification."}, {"id": "resume-skill-11", "name": "OpenTelemetry / Prometheus / Grafana", "category": "Infrastructure", "proficiency": 0, "sortOrder": 11, "evidence": "Distributed-system observability and production incident analysis."}, {"id": "resume-skill-12", "name": "xUnit / Testcontainers / AI-assisted development", "category": "Practices", "proficiency": 0, "sortOrder": 12, "evidence": "Behavioral and integration tests; Claude, Cursor and Copilot for implementation, refactoring and test generation."}];

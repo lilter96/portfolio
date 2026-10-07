@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from "react";
+import { contactDetails } from "@/lib/contact-details";
 import { useTranslation } from "react-i18next";
 import { useMutation } from "@tanstack/react-query";
 import { isStaticShowcase } from "@/lib/runtime-config";
@@ -91,12 +92,12 @@ export function Contact() {
       <div className="contact-layout">
         <div className="contact-info reveal reveal-1">
           <p className="contact-info-text">{t("contact.info")}</p>
-          <a className="contact-email-link mono" href="mailto:terentiy.gatsukov@gmail.com">
-            terentiy.gatsukov@gmail.com
+          <a className="contact-email-link mono" href={`mailto:${contactDetails.email}`}>
+            {contactDetails.email}
           </a>
           <div className="contact-links">
             <a
-              href="https://github.com/lilter96"
+              href={contactDetails.github}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-social-link"
@@ -104,13 +105,15 @@ export function Contact() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/terentiy-gatsukov-048694224"
+              href={contactDetails.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-social-link"
             >
               LinkedIn
             </a>
+            <a href={contactDetails.telegram} target="_blank" rel="noopener noreferrer" className="contact-social-link">Telegram · @lilter96</a>
+            <a href={contactDetails.phoneHref} className="contact-social-link">{contactDetails.phone}</a>
           </div>
         </div>
 

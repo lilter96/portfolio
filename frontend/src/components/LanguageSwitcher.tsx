@@ -3,14 +3,16 @@ import { useTranslation } from "react-i18next";
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
+  const isRussian = i18n.language.startsWith("ru");
+
   return (
     <button
       className="lang-switcher"
-      onClick={() => i18n.changeLanguage(i18n.language === "en" ? "ru" : "en")}
+      onClick={() => i18n.changeLanguage(isRussian ? "en" : "ru")}
       type="button"
-      aria-label={`${i18n.language === "en" ? "RU" : "EN"} — Switch to ${i18n.language === "en" ? "Russian" : "English"}`}
+      aria-label={`${isRussian ? "EN" : "RU"} — Switch to ${isRussian ? "English" : "Russian"}`}
     >
-      {i18n.language === "en" ? "RU" : "EN"}
+      {isRussian ? "EN" : "RU"}
     </button>
   );
 }

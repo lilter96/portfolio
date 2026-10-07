@@ -1,5 +1,6 @@
 import { useMemo, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { projectDescriptionsRussian } from "@/lib/project-locales";
 import { useProjects } from "@/hooks/useProjects";
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
 import { QueryState } from "@/components/QueryState";
@@ -33,11 +34,14 @@ export function Projects() {
 
   return (
     <section id="projects" className="projects-section" aria-label={t("nav.projects")}>
+      <p className="eyebrow">{t("projects.eyebrow")}</p>
       <h2 className="section-title reveal">{t("nav.projects")}</h2>
 
+      <p className="section-lead">{t("projects.intro")}</p>
       <a className="workflow-preview reveal" href="https://github.com/lilter96/jobfinder-showcase" target="_blank" rel="noopener noreferrer">
         <img src={`${import.meta.env.BASE_URL}images/jobfinder-workflow.png`} alt="JobFinder synthetic acceptance: revision conflict preserves the unsaved application draft" loading="lazy" />
       </a>
+      <p className="preview-caption">{t("projects.previewCaption")}</p>
 
       {/* ── Domain filters ────────────────────────────────── */}
       <div className="projects-filters reveal reveal-1" role="group" aria-label={t("projects.filterByDomain")}>
@@ -57,7 +61,7 @@ export function Projects() {
             type="button"
             aria-pressed={domainFilter === domain}
           >
-            {DOMAIN_LABELS[domain]}
+            {t(`projects.domain${domain}`, DOMAIN_LABELS[domain])}
           </button>
         ))}
       </div>
@@ -200,7 +204,7 @@ function ProjectCard({
   isFlagship: boolean;
   delay: 1 | 2 | 3 | 4 | 5 | 6;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div
@@ -212,7 +216,7 @@ function ProjectCard({
         <StatusBadge status={project.status as ProjectStatus} />
         {project.domain && (
           <span className="project-domain-label">
-            {DOMAIN_LABELS[project.domain as ProjectDomain] ?? project.domain}
+            {t(`projects.domain${project.domain}`, DOMAIN_LABELS[project.domain as ProjectDomain] ?? project.domain)}
           </span>
         )}
         {isFlagship && <span className="project-flagship-star" aria-label="Flagship project">★</span>}
@@ -221,10 +225,10 @@ function ProjectCard({
       <h3 className="project-title">{project.title}</h3>
 
       {project.role && (
-        <p className="project-role">{project.role}</p>
+        <p className="project-role">{project.role === "Personal engineering project" ? t("projects.personalRole") : project.role}</p>
       )}
 
-      <p className="project-desc">{project.description}</p>
+      <p className="project-desc">{i18n.language.startsWith("ru") ? projectDescriptionsRussian[project.title] ?? project.description : project.description}</p>
 
       {/* Tech tags */}
       <div className="project-tech-list">
@@ -245,7 +249,7 @@ function ProjectCard({
               rel="noopener noreferrer"
               className="project-link"
             >
-              {project.title.includes("TGSlots") ? t("projects.playLive") : "Live ↗"}
+              {project.title.includes("TGSlots") ? t("projects.playLive") : `${t("projects.live")} ↗`}
             </a>
           )}
           {project.sourceUrl && (
@@ -255,7 +259,7 @@ function ProjectCard({
               rel="noopener noreferrer"
               className="project-link project-link-source"
             >
-              Source ↗
+              {t("projects.source")} ↗
             </a>
           )}
           {project.evidenceUrl && project.evidenceUrl !== project.url && project.evidenceUrl !== project.sourceUrl && (
@@ -265,7 +269,7 @@ function ProjectCard({
               rel="noopener noreferrer"
               className="project-link project-link-evidence"
             >
-              Evidence ↗
+              {t("projects.evidence")} ↗
             </a>
           )}
         </div>

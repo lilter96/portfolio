@@ -66,9 +66,9 @@ describe("Contact form", () => {
 
   it("renders email contact link", () => {
     renderContact();
-    const link = screen.getByText("terentiy.gatsukov@gmail.com");
+    const link = screen.getByText("lilter96dotnet@gmail.com");
     expect(link).toBeInTheDocument();
-    expect(link.closest("a")).toHaveAttribute("href", "mailto:terentiy.gatsukov@gmail.com");
+    expect(link.closest("a")).toHaveAttribute("href", "mailto:lilter96dotnet@gmail.com");
   });
 
   it("renders LinkedIn and GitHub links", () => {
@@ -79,7 +79,7 @@ describe("Contact form", () => {
     );
     expect(screen.getByText("LinkedIn").closest("a")).toHaveAttribute(
       "href",
-      "https://linkedin.com/in/terentiy-gatsukov-048694224",
+      "https://www.linkedin.com/in/terentiy-gatsukov/",
     );
   });
 

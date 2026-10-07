@@ -55,7 +55,7 @@ describe("Hero", () => {
     const contactLink = screen.getByText("Get in touch");
     expect(contactLink.closest("a")).toHaveAttribute(
       "href",
-      "mailto:terentiy.gatsukov@gmail.com",
+      "mailto:lilter96dotnet@gmail.com",
     );
   });
 
@@ -64,11 +64,11 @@ describe("Hero", () => {
     const cvLink = screen.getByText("Download CV");
     expect(cvLink.closest("a")).toHaveAttribute(
       "href",
-      "/cv/terentiy-gatsukov-cv-en.pdf",
+      "/cv/terentiy-gatsukov-slot-games-en.pdf",
     );
     expect(cvLink.closest("a")).toHaveAttribute(
       "download",
-      "terentiy-gatsukov-cv-en.pdf",
+      "terentiy-gatsukov-slot-games-en.pdf",
     );
   });
 

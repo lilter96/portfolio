@@ -6,6 +6,8 @@ import { About } from "@/pages/About";
 import { Experience } from "@/pages/Experience";
 import { Skills } from "@/pages/Skills";
 import { Projects } from "@/pages/Projects";
+import { Games } from "@/pages/Games";
+import { Education } from "@/pages/Education";
 import { Contact } from "@/pages/Contact";
 
 const THEME_KEY = "portfolio-theme";
@@ -44,31 +46,14 @@ function App() {
 
   return (
     <div data-theme={theme}>
-      <div className="scanlines" />
-      <Layout>
-        <button
-          className="theme-toggle"
-          onClick={toggleTheme}
-          type="button"
-          aria-label={
-            theme === "dark"
-              ? "☀ Light — Switch to light theme"
-              : "☾ Dark — Switch to dark theme"
-          }
-          style={{
-            position: "fixed",
-            top: "var(--space-4)",
-            right: "var(--space-4)",
-            zIndex: "var(--z-sticky)",
-          }}
-        >
-          {theme === "dark" ? "☀ Light" : "☾ Dark"}
-        </button>
+      <Layout theme={theme} onToggleTheme={toggleTheme}>
         <Hero />
         <About />
-        <Projects />
         <Experience />
+        <Games />
+        <Projects />
         <Skills />
+        <Education />
         <Contact />
       </Layout>
     </div>

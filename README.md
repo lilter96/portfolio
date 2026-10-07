@@ -20,6 +20,8 @@ The backend serves projects, experience, skills and contact requests; it is not 
 
 On 2026-10-07: **56 backend tests and 43 frontend tests passed**, with isolated PostgreSQL/Redis integration fixtures. Release build, frontend build and ESLint passed. GitHub Pages assets and CV links use the `/portfolio/` base path.
 
+The public profile was rebuilt from the owner’s current .NET and Slot Games CVs. [Content sources and verification](docs/PROFILE-CONTENT.md) record dates, contact destinations and byte-identical PDF copies. Commercial history and public-project verification are presented separately.
+
 ## Structure
 
 ```

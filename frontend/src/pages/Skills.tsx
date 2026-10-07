@@ -1,10 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { useSkills } from "@/hooks/useSkills";
+import { resumeSkillRussian } from "@/lib/resume-content";
 import { QueryState } from "@/components/QueryState";
 import type { SkillDto } from "@/types/api";
 
 const CATEGORY_ORDER: Record<string, number> = {
   Backend: 0,
+  "Game engineering": 1,
+  Messaging: 3,
+  Infrastructure: 4,
   Domain: 1,
   Frontend: 2,
   Data: 3,
@@ -24,7 +28,7 @@ const CATEGORY_ACCENTS: Record<string, string> = {
 };
 
 export function Skills() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const query = useSkills();
 
   return (
@@ -32,13 +36,13 @@ export function Skills() {
       <h2 className="section-title reveal">{t("nav.skills")}</h2>
 
       <QueryState data={query.data} isLoading={query.isLoading} error={query.error}>
-        {(data) => <SkillsGrid skills={data} />}
+        {(data) => <SkillsGrid skills={data} language={i18n.language} />}
       </QueryState>
     </section>
   );
 }
 
-function SkillsGrid({ skills }: { skills: SkillDto[] }) {
+function SkillsGrid({ skills, language }: { skills: SkillDto[]; language: string }) {
   const grouped = new Map<string, SkillDto[]>();
 
   for (const s of skills) {
@@ -90,7 +94,7 @@ function SkillsGrid({ skills }: { skills: SkillDto[] }) {
                   </span>
                 </div>
                 {skill.evidence && (
-                  <p className="skill-evidence-text mono">{skill.evidence}</p>
+                  <p className="skill-evidence-text mono">{language.startsWith("ru") ? resumeSkillRussian[skill.name as keyof typeof resumeSkillRussian] ?? skill.evidence : skill.evidence}</p>
                 )}
               </div>
             ))}

@@ -12,6 +12,8 @@ i18n
       ru: { translation: ru },
     },
     fallbackLng: "en",
+    supportedLngs: ["en", "ru"],
+    load: "languageOnly",
     debug: false,
     interpolation: {
       escapeValue: false,

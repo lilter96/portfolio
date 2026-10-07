@@ -73,7 +73,7 @@ namespace Portfolio.Api.Tests.Integration
             Assert.NotNull(experiences);
             Assert.NotEmpty(experiences);
             Assert.Contains(experiences, e => e.Company == "Custom Games Studio");
-            Assert.Contains(experiences, e => e.Company == "Softeq");
+            Assert.Contains(experiences, e => e.Company == "Solvintech");
         }
 
         [Fact]
@@ -87,8 +87,8 @@ namespace Portfolio.Api.Tests.Integration
 
             Assert.NotNull(skills);
             Assert.NotEmpty(skills);
-            Assert.Contains(skills, s => s.Name == "C# / .NET 10");
-            Assert.Contains(skills, s => s.Name == "Exact probability / Monte Carlo");
+            Assert.Contains(skills, s => s.Name == "C# / .NET / ASP.NET Core");
+            Assert.Contains(skills, s => s.Name == "RTP / volatility / Monte Carlo");
         }
 
         [Fact]

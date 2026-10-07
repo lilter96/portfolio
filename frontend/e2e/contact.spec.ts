@@ -81,7 +81,7 @@ test.describe("Contact form", () => {
 
     // Email link inside contact section
     await expect(
-      contactSection.locator("a[href='mailto:terentiy.gatsukov@gmail.com']"),
+      contactSection.locator("a[href='mailto:lilter96dotnet@gmail.com']"),
     ).toBeVisible();
 
     // GitHub link
@@ -92,7 +92,7 @@ test.describe("Contact form", () => {
     // LinkedIn link
     await expect(
       contactSection.locator(
-        "a[href='https://linkedin.com/in/terentiy-gatsukov-048694224']",
+        "a[href='https://www.linkedin.com/in/terentiy-gatsukov/']",
       ),
     ).toBeVisible();
   });

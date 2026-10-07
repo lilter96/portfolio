@@ -8,6 +8,7 @@ import "@/styles/animations.css";
 import "@/styles/layout.css";
 import "@/styles/hero.css";
 import "@/styles/content.css";
+import "@/styles/profile.css";
 import App from "./App.tsx";
 
 const queryClient = new QueryClient({

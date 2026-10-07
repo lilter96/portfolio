@@ -48,6 +48,20 @@ jobs:
         run: npm run test:coverage
         working-directory: frontend
 
+      - name: Install browser for public-profile checks
+        run: npx playwright install --with-deps chromium
+        working-directory: frontend
+
+      - name: Build static public profile
+        run: npm run build
+        working-directory: frontend
+        env:
+          VITE_STATIC_SHOWCASE: "true"
+
+      - name: Verify current CV contacts and dates in both languages
+        run: npm run test:e2e -- e2e/profile-content.spec.ts --reporter=line
+        working-directory: frontend
+
       - name: Upload coverage
         if: always()
         uses: actions/upload-artifact@v4
