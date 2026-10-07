@@ -8,4 +8,4 @@ ISRC: USUAN1500029. Music excerpts edited and faded. Music is the only audio inp
 
 Approved V3 visual edit retained; real X7 Club bonus inserted into the main and LinkedIn edits. Original captures preserved separately. Review-session copies have no audio tracks.
 
-V4 additions pending owner review; not published.
+V4 approved by owner for publication on 2026-10-08.

@@ -1,5 +1,5 @@
 {
-  "reviewStatus": "V4 X7 addition and music-only mix awaiting owner approval; do not publish",
+  "reviewStatus": "V4 approved by owner for publication on 2026-10-08",
   "sourceGameplayCommit": "4d079f2",
   "captureMode": "normal; native NVIDIA GPU; original games use canvas capture; X7 uses full-tab capture",
   "sourceIntervalFPS": {
@@ -575,6 +575,6 @@
     "build": "passed",
     "lint": "passed",
     "gameShowcaseE2E": "passed, including X7 Club playback and mobile overflow check",
-    "deployment": "not performed"
+    "deployment": "Owner approved GitHub Pages deployment"
   }
 }
