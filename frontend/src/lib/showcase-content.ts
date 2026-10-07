@@ -79,11 +79,13 @@ export const showcaseProjects: ProjectDto[] = [
   {
     "id": "project-4",
     "title": "TGSlots",
-    "description": "Modular TypeScript slot games, PixiJS rendering and Monte Carlo simulation tooling. 736 tests, all workspace typechecks and lint passed. Bun/Elysia API uses prototype in-memory state.",
+    "description": "Four TypeScript/PixiJS games with Monte Carlo tooling. X7 Club adds a Go session server and RabbitMQ-backed math worker. 785 platform tests and 7 Go race tests passed; live duplicate-request and bonus accounting checks passed. Demo sessions are in memory.",
     "url": null,
     "sourceUrl": "https://github.com/lilter96/tgslots",
     "technologies": [
       "TypeScript",
+      "Go",
+      "RabbitMQ",
       "Bun",
       "Elysia",
       "PixiJS 8",
@@ -92,7 +94,7 @@ export const showcaseProjects: ProjectDto[] = [
     "sortOrder": 4,
     "status": "OpenSource",
     "role": "Personal engineering project",
-    "evidenceUrl": "https://github.com/lilter96/tgslots/blob/main/README.md",
+    "evidenceUrl": "https://github.com/lilter96/tgslots/blob/master/docs/x7-verification.md",
     "domain": "IGaming"
   },
   {
