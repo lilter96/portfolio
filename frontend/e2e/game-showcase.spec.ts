@@ -14,7 +14,13 @@ test("game showcase waits for playback intent and switches real clips", async ({
   await expect(player).toHaveAttribute("playsinline", "");
   expect(await player.getAttribute("autoplay")).toBeNull();
   expect(requests).toHaveLength(0);
-  for (const game of ["X7 Club", "Ancient Dragon", "Woodland Whisper", "Le Militare"]) {
+  for (const game of [
+    "Nine Lives",
+    "X7 Club",
+    "Le Militare",
+    "Woodland Whisper",
+    "Ancient Dragon",
+  ]) {
     await section.getByRole("button", { name: game, exact: true }).click();
     await expect(section.getByRole("heading", { name: game })).toBeVisible();
     await player.evaluate(async (video: HTMLVideoElement) => {
@@ -26,11 +32,13 @@ test("game showcase waits for playback intent and switches real clips", async ({
       .toBeGreaterThan(0.2);
     await expect
       .poll(() => player.evaluate((video: HTMLVideoElement) => video.videoWidth))
-      .toBe(1280);
+      .toBe(game === "Nine Lives" ? 2560 : 1280);
     await section.getByRole("button", { name: "Promo edit", exact: true }).click();
     await expect(section.locator("source")).toHaveAttribute("src", /-promo\.mp4$/);
     await section.getByRole("button", { name: "Full capture", exact: true }).click();
   }
+  await section.getByRole("button", { name: "TGSlots · Gameplay reel", exact: true }).click();
+  await expect(section.locator("source")).toHaveAttribute("src", /tgslots-reel\.mp4$/);
   expect(await section.locator("video").count()).toBe(1);
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(section.getByRole("button", { name: "Le Militare", exact: true })).toBeVisible();

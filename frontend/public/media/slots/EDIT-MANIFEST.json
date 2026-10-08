@@ -1,0 +1,340 @@
+[
+  {
+    "file": "nine-lives-promo.mp4",
+    "width": 2560,
+    "height": 1440,
+    "fps": 120,
+    "duration": 30.25,
+    "segments": [
+      {
+        "start": 27.2,
+        "duration": 6.0,
+        "title": "Collect.\nTransform.",
+        "body": "Reaper collects chip prizes.\nChips become WILDs.",
+        "kind": "game"
+      },
+      {
+        "start": 61.5,
+        "duration": 7.0,
+        "title": "Win. Cascade.\nBuild momentum.",
+        "body": "Clusters refill.\nEach win raises the multiplier.",
+        "kind": "game"
+      },
+      {
+        "start": 50.8,
+        "duration": 5.5,
+        "title": "Next life.\nSame multiplier.",
+        "body": "Nine free spins.\nBonus multiplier carries forward.",
+        "kind": "game"
+      },
+      {
+        "start": 89.0,
+        "duration": 4.5,
+        "title": "Every outcome.\nAccounted for.",
+        "body": "Real API session.\nNormal speed. Demo credits.",
+        "kind": "game"
+      },
+      {
+        "start": 31.0,
+        "duration": 4.0,
+        "title": "Built. Measured. Verified.",
+        "body": "",
+        "kind": "proof"
+      },
+      {
+        "start": 94.0,
+        "duration": 4.5,
+        "title": "Terentiy Gatsukov",
+        "body": "",
+        "kind": "end"
+      }
+    ],
+    "music": "Deadly Roulette",
+    "musicArtist": "Kevin MacLeod",
+    "musicLicense": "CC BY 4.0",
+    "musicStart": 20,
+    "audioSources": [
+      "nine-lives-review/deadly-roulette.mp3"
+    ],
+    "gameplayAudioIncluded": false,
+    "source": "Approved native 2560\u00d71440 recording; 76.971 actual captured FPS, 120 FPS timing-preserving export; no interpolation or retiming.",
+    "approval": "Owner approved source, music and montage on 2026-10-08"
+  },
+  {
+    "file": "nine-lives-linkedin.mp4",
+    "width": 2160,
+    "height": 2700,
+    "fps": 60,
+    "duration": 30.25,
+    "segments": [
+      {
+        "start": 27.2,
+        "duration": 6.0,
+        "title": "Collect.\nTransform.",
+        "body": "Reaper collects chip prizes.\nChips become WILDs.",
+        "kind": "game"
+      },
+      {
+        "start": 61.5,
+        "duration": 7.0,
+        "title": "Win. Cascade.\nBuild momentum.",
+        "body": "Clusters refill.\nEach win raises the multiplier.",
+        "kind": "game"
+      },
+      {
+        "start": 50.8,
+        "duration": 5.5,
+        "title": "Next life.\nSame multiplier.",
+        "body": "Nine free spins.\nBonus multiplier carries forward.",
+        "kind": "game"
+      },
+      {
+        "start": 89.0,
+        "duration": 4.5,
+        "title": "Every outcome.\nAccounted for.",
+        "body": "Real API session.\nNormal speed. Demo credits.",
+        "kind": "game"
+      },
+      {
+        "start": 31.0,
+        "duration": 4.0,
+        "title": "Built. Measured. Verified.",
+        "body": "",
+        "kind": "proof"
+      },
+      {
+        "start": 94.0,
+        "duration": 4.5,
+        "title": "Terentiy Gatsukov",
+        "body": "",
+        "kind": "end"
+      }
+    ],
+    "music": "Deadly Roulette",
+    "musicArtist": "Kevin MacLeod",
+    "musicLicense": "CC BY 4.0",
+    "musicStart": 20,
+    "audioSources": [
+      "nine-lives-review/deadly-roulette.mp3"
+    ],
+    "gameplayAudioIncluded": false,
+    "source": "Approved native 2560\u00d71440 recording; 76.971 actual captured FPS, 120 FPS timing-preserving export; no interpolation or retiming.",
+    "approval": "Owner approved source, music and montage on 2026-10-08"
+  },
+  {
+    "file": "tgslots-reel.mp4",
+    "width": 1280,
+    "height": 720,
+    "fps": 60,
+    "duration": 50.033,
+    "segments": [
+      {
+        "start": 27.2,
+        "duration": 6.0,
+        "title": "Collect.\nTransform.",
+        "body": "Reaper collects chip prizes.\nChips become WILDs.",
+        "kind": "game",
+        "game": "nine-lives"
+      },
+      {
+        "game": "combat",
+        "start": 41,
+        "duration": 4.533333333333333,
+        "kicker": "LE MILITARE / STICKY WILDS",
+        "title": "Interception.\nTransformation.",
+        "body": "Rocket impact \u2192 WILD \u2192 \u00d72",
+        "kind": "game",
+        "cachedJob": "tgslots-reel",
+        "cachedIndex": 0
+      },
+      {
+        "game": "dragon",
+        "start": 4,
+        "duration": 6.25,
+        "kicker": "ANCIENT DRAGON / FREE SPINS",
+        "title": "Every spin.\nEvery payline.",
+        "body": "25 paylines \u00b7 real bonus session",
+        "kind": "game",
+        "cachedJob": "tgslots-reel",
+        "cachedIndex": 1
+      },
+      {
+        "game": "forest",
+        "start": 10.3,
+        "duration": 6.4,
+        "kicker": "WOODLAND WHISPER / PICK BONUS",
+        "title": "Pick. Match.\nUnlock the bonus.",
+        "body": "Card match \u2192 free spins",
+        "kind": "game",
+        "cachedJob": "tgslots-reel",
+        "cachedIndex": 2
+      },
+      {
+        "game": "forest",
+        "start": 20.2,
+        "duration": 6.2,
+        "kicker": "WOODLAND WHISPER / \u00d72 FREE SPINS",
+        "title": "Matched cards.\nMultiplied wins.",
+        "body": "\u00d72 wins \u00b7 30 paylines",
+        "kind": "game",
+        "cachedJob": "tgslots-reel",
+        "cachedIndex": 3
+      },
+      {
+        "game": "combat",
+        "start": 15.1,
+        "duration": 6.4,
+        "kicker": "LE MILITARE / PERSISTENT BONUS STATE",
+        "title": "The reel stays\nWILD.",
+        "body": "Next spin. Same locked reel.",
+        "kind": "game",
+        "cachedJob": "tgslots-reel",
+        "cachedIndex": 4
+      },
+      {
+        "game": "club",
+        "start": 11.203,
+        "duration": 7.75,
+        "kicker": "X7 CLUB / HOLD & SPIN",
+        "title": "Lock coins.\nBoost columns.",
+        "body": "Hold & Spin\nGo \u00b7 RabbitMQ",
+        "kind": "game"
+      },
+      {
+        "start": 31.0,
+        "duration": 4.0,
+        "title": "Built. Measured. Verified.",
+        "body": "",
+        "kind": "proof",
+        "game": "nine-lives"
+      },
+      {
+        "game": "dragon",
+        "start": 16,
+        "duration": 4.5,
+        "kicker": "BUILT BY",
+        "title": "",
+        "body": "",
+        "kind": "end",
+        "cachedJob": "tgslots-reel",
+        "cachedIndex": 6
+      }
+    ],
+    "music": "Exit the Premises",
+    "musicArtist": "Kevin MacLeod",
+    "musicLicense": "CC BY 4.0",
+    "audioSources": [
+      "promo-research/exit-the-premises.mp3"
+    ],
+    "gameplayAudioIncluded": false,
+    "source": "Nine Lives downsampled from approved native 1440p HFR capture; four previously approved native 720p captures. Normal speed, no invented outcomes."
+  },
+  {
+    "file": "tgslots-linkedin.mp4",
+    "width": 1080,
+    "height": 1350,
+    "fps": 60,
+    "duration": 50.033,
+    "segments": [
+      {
+        "start": 27.2,
+        "duration": 6.0,
+        "title": "Collect.\nTransform.",
+        "body": "Reaper collects chip prizes.\nChips become WILDs.",
+        "kind": "game",
+        "game": "nine-lives"
+      },
+      {
+        "game": "combat",
+        "start": 41,
+        "duration": 4.533333333333333,
+        "kicker": "LE MILITARE / STICKY WILDS",
+        "title": "Interception.\nTransformation.",
+        "body": "Rocket impact \u2192 WILD \u2192 \u00d72",
+        "kind": "game",
+        "cachedJob": "tgslots-linkedin",
+        "cachedIndex": 0
+      },
+      {
+        "game": "dragon",
+        "start": 4,
+        "duration": 6.25,
+        "kicker": "ANCIENT DRAGON / FREE SPINS",
+        "title": "Every spin.\nEvery payline.",
+        "body": "25 paylines \u00b7 real bonus session",
+        "kind": "game",
+        "cachedJob": "tgslots-linkedin",
+        "cachedIndex": 1
+      },
+      {
+        "game": "forest",
+        "start": 10.3,
+        "duration": 6.4,
+        "kicker": "WOODLAND WHISPER / PICK BONUS",
+        "title": "Pick. Match.\nUnlock the bonus.",
+        "body": "Card match \u2192 free spins",
+        "kind": "game",
+        "cachedJob": "tgslots-linkedin",
+        "cachedIndex": 2
+      },
+      {
+        "game": "forest",
+        "start": 20.2,
+        "duration": 6.2,
+        "kicker": "WOODLAND WHISPER / \u00d72 FREE SPINS",
+        "title": "Matched cards.\nMultiplied wins.",
+        "body": "\u00d72 wins \u00b7 30 paylines",
+        "kind": "game",
+        "cachedJob": "tgslots-linkedin",
+        "cachedIndex": 3
+      },
+      {
+        "game": "combat",
+        "start": 15.1,
+        "duration": 6.4,
+        "kicker": "LE MILITARE / PERSISTENT BONUS STATE",
+        "title": "The reel stays\nWILD.",
+        "body": "Next spin. Same locked reel.",
+        "kind": "game",
+        "cachedJob": "tgslots-linkedin",
+        "cachedIndex": 4
+      },
+      {
+        "game": "club",
+        "start": 11.203,
+        "duration": 7.75,
+        "kicker": "X7 CLUB / HOLD & SPIN",
+        "title": "Lock coins.\nBoost columns.",
+        "body": "Hold & Spin\nGo \u00b7 RabbitMQ",
+        "kind": "game"
+      },
+      {
+        "start": 31.0,
+        "duration": 4.0,
+        "title": "Built. Measured. Verified.",
+        "body": "",
+        "kind": "proof",
+        "game": "nine-lives"
+      },
+      {
+        "game": "dragon",
+        "start": 16,
+        "duration": 4.5,
+        "kicker": "BUILT BY",
+        "title": "",
+        "body": "",
+        "kind": "end",
+        "cachedJob": "tgslots-linkedin",
+        "cachedIndex": 6
+      }
+    ],
+    "music": "Exit the Premises",
+    "musicArtist": "Kevin MacLeod",
+    "musicLicense": "CC BY 4.0",
+    "audioSources": [
+      "promo-research/exit-the-premises.mp3"
+    ],
+    "gameplayAudioIncluded": false,
+    "source": "Nine Lives downsampled from approved native 1440p HFR capture; four previously approved native 720p captures. Normal speed, no invented outcomes."
+  }
+]

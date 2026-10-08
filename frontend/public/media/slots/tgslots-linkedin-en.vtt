@@ -1,27 +1,30 @@
 WEBVTT
 
-00:00:00.250 --> 00:00:04.283
+00:00.000 --> 00:05.750
+Reaper collects cash prizes; chip positions become consumable WILDs.
+
+00:06.000 --> 00:10.033
 Interception. Transformation. Rocket impact → WILD → ×2
 
-00:00:04.533 --> 00:00:10.283
+00:10.283 --> 00:16.033
 Every spin. Every payline. 25 paylines · real bonus session
 
-00:00:10.533 --> 00:00:16.433
+00:16.283 --> 00:22.183
 Pick. Match. Unlock the bonus. Card match → free spins
 
-00:00:16.683 --> 00:00:22.383
+00:22.433 --> 00:28.133
 Matched cards. Multiplied wins. ×2 wins · 30 paylines
 
-00:00:22.633 --> 00:00:28.533
+00:28.383 --> 00:34.283
 The reel stays WILD. Next spin. Same locked reel.
 
-00:00:28.783 --> 00:00:36.033
+00:34.533 --> 00:41.783
 Lock coins. Boost columns. Hold & Spin
 Go · RabbitMQ
 
-00:00:36.283 --> 00:00:39.783
-81.6M complete Le Militare rounds checked by an independent math evaluator; 767 passing TGSlots platform tests.
+00:42.033 --> 00:45.533
+Nine Lives: 11M complete simulated rounds; 812 passing TGSlots workspace tests.
 
-00:00:40.033 --> 00:00:44.033
+00:45.783 --> 00:49.783
 Terentiy Gatsukov · Senior .NET Engineer · github.com/lilter96/tgslots
 

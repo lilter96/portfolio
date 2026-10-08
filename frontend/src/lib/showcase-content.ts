@@ -79,7 +79,7 @@ export const showcaseProjects: ProjectDto[] = [
   {
     "id": "project-4",
     "title": "TGSlots",
-    "description": "Four TypeScript/PixiJS games with Monte Carlo tooling. X7 Club adds a Go session server and RabbitMQ-backed math worker. 785 platform tests and 7 Go race tests passed; live duplicate-request and bonus accounting checks passed. Demo sessions are in memory.",
+    "description": "Five TypeScript/PixiJS games, led by Nine Lives collector cascades, with Monte Carlo tooling. X7 Club adds a Go session server and RabbitMQ-backed math worker. 812 platform tests and 7 Go race tests passed; live duplicate-request and bonus accounting checks passed. Demo sessions are in memory.",
     "url": null,
     "sourceUrl": "https://github.com/lilter96/tgslots",
     "technologies": [

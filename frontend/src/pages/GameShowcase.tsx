@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+// Individual games are ordered by current visual polish; the earlier platform reel stays available.
 const clips = [
   {
-    id: "tgslots-reel",
-    title: "TGSlots",
-    description: "reelDescription",
-    duration: "0:45",
-    fullDuration: "0:45",
+    id: "nine-lives",
+    title: "Nine Lives",
+    description: "nineLives",
+    duration: "0:31",
+    fullDuration: "1:40",
+    hasPromo: true,
   },
   {
     id: "x7-club",
@@ -15,20 +17,7 @@ const clips = [
     description: "club",
     duration: "0:17",
     fullDuration: "0:37",
-  },
-  {
-    id: "ancient-dragon",
-    title: "Ancient Dragon",
-    description: "dragon",
-    duration: "0:21",
-    fullDuration: "0:37",
-  },
-  {
-    id: "woodland-whisper",
-    title: "Woodland Whisper",
-    description: "woodland",
-    duration: "0:22",
-    fullDuration: "0:57",
+    hasPromo: true,
   },
   {
     id: "le-militare",
@@ -36,6 +25,31 @@ const clips = [
     description: "militare",
     duration: "0:24",
     fullDuration: "1:21",
+    hasPromo: true,
+  },
+  {
+    id: "woodland-whisper",
+    title: "Woodland Whisper",
+    description: "woodland",
+    duration: "0:22",
+    fullDuration: "0:57",
+    hasPromo: true,
+  },
+  {
+    id: "ancient-dragon",
+    title: "Ancient Dragon",
+    description: "dragon",
+    duration: "0:21",
+    fullDuration: "0:37",
+    hasPromo: true,
+  },
+  {
+    id: "tgslots-reel",
+    title: "TGSlots",
+    description: "reelDescription",
+    duration: "0:51",
+    fullDuration: "0:51",
+    hasPromo: true,
   },
 ] as const;
 const media = `${import.meta.env.BASE_URL}media/slots/`;
@@ -46,8 +60,10 @@ export function GameShowcase() {
   const [format, setFormat] = useState<"gameplay" | "promo">("promo");
   const [failed, setFailed] = useState(false);
   const clip = clips[selected] ?? clips[0];
-  const isReel = selected === 0;
-  const file = `${media}${clip.id}${isReel ? "" : `-${format}`}.mp4`;
+  const isReel = clip.id === "tgslots-reel";
+  const isNineLives = clip.id === "nine-lives";
+  const effectiveFormat = clip.hasPromo ? format : "gameplay";
+  const file = `${media}${clip.id}${isReel ? "" : `-${effectiveFormat}`}.mp4`;
   const title = isReel ? t("showreel.reel") : clip.title;
   const captionLanguage = i18n.resolvedLanguage?.startsWith("ru") ? "ru" : "en";
 
@@ -63,14 +79,14 @@ export function GameShowcase() {
           playsInline
           preload="none"
           poster={`${media}${clip.id}.webp`}
-          aria-label={`${title} · ${isReel ? t("showreel.promo") : t(`showreel.${format}`)}`}
+          aria-label={`${title} · ${isReel ? t("showreel.promo") : t(`showreel.${effectiveFormat}`)}`}
           onError={() => setFailed(true)}
         >
           <source src={file} type="video/mp4" />
           <track
             key={captionLanguage}
             kind="captions"
-            src={`${media}${clip.id}${isReel ? "" : `-${format}`}-${captionLanguage}.vtt`}
+            src={`${media}${clip.id}${isReel ? "" : `-${effectiveFormat}`}-${captionLanguage}.vtt`}
             srcLang={captionLanguage}
             label={captionLanguage === "ru" ? "Русский" : "English"}
           />
@@ -80,8 +96,9 @@ export function GameShowcase() {
           <div>
             <h3>{title}</h3>
             <p>{t(`showreel.${clip.description}`)}</p>
+            {isNineLives && <p>{t("showreel.nineQuality")}</p>}
           </div>
-          {!isReel && (
+          {!isReel && clip.hasPromo && (
             <div className="showreel-formats" role="group" aria-label={t("showreel.format")}>
               {(["gameplay", "promo"] as const).map((value) => (
                 <button
@@ -111,7 +128,7 @@ export function GameShowcase() {
             type="button"
             key={item.id}
             className="showreel-choice"
-            aria-label={index === 0 ? t("showreel.reel") : item.title}
+            aria-label={item.id === "tgslots-reel" ? t("showreel.reel") : item.title}
             aria-pressed={selected === index}
             onClick={() => {
               setSelected(index);
@@ -120,19 +137,26 @@ export function GameShowcase() {
           >
             <div className="showreel-thumbnail">
               <img src={`${media}${item.id}.webp`} alt="" loading="lazy" width="480" height="270" />
-              <span>{format === "gameplay" ? item.fullDuration : item.duration}</span>
+              <span>
+                {!item.hasPromo || format === "gameplay" ? item.fullDuration : item.duration}
+              </span>
             </div>
             <span className="showreel-choice-title">
-              {index === 0 ? t("showreel.reel") : item.title}
+              {item.id === "tgslots-reel" ? t("showreel.reel") : item.title}
             </span>
           </button>
         ))}
       </div>
       <div className="showreel-footer">
         <p>{t("showreel.note")}</p>
-        <a href={`${media}tgslots-linkedin.mp4`} download>
+        <a href={`${media}${isNineLives ? "nine-lives" : "tgslots"}-linkedin.mp4`} download>
           {t("showreel.linkedin")}
         </a>
+        {isNineLives && (
+          <a href="https://github.com/lilter96/tgslots/releases/download/nine-lives-media-2026-10-08/nine-lives-gameplay-1440p-120.mp4">
+            {t("showreel.masterCapture")}
+          </a>
+        )}
         <a href="https://github.com/lilter96/tgslots" target="_blank" rel="noopener noreferrer">
           {t("showreel.source")} ↗
         </a>
@@ -140,11 +164,15 @@ export function GameShowcase() {
       <p className="showreel-credits">
         {t("showreel.music")}{" "}
         <a
-          href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500029"
+          href={
+            isNineLives
+              ? "https://incompetech.com/wordpress/2016/06/deadly-roulette/"
+              : "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500029"
+          }
           target="_blank"
           rel="noopener noreferrer"
         >
-          Exit the Premises
+          {isNineLives ? "Deadly Roulette" : "Exit the Premises"}
         </a>{" "}
         — Kevin MacLeod ·{" "}
         <a
