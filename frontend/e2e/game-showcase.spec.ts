@@ -33,8 +33,22 @@ test("game showcase waits for playback intent and switches real clips", async ({
     await expect
       .poll(() => player.evaluate((video: HTMLVideoElement) => video.videoWidth))
       .toBe(game === "Nine Lives" ? 2560 : 1280);
+    if (game === "Nine Lives") {
+      await expect(section.locator("source")).toHaveAttribute(
+        "src",
+        /nine-lives-promo-clean\.mp4$/,
+      );
+      await expect(section.locator("track")).toHaveAttribute(
+        "src",
+        /nine-lives-promo-clean-en\.vtt$/,
+      );
+      await expect(section.getByRole("button", { name: "Full capture", exact: true })).toHaveCount(
+        0,
+      );
+      continue;
+    }
     await section.getByRole("button", { name: "Promo edit", exact: true }).click();
-    await expect(section.locator("source")).toHaveAttribute("src", /-promo\.mp4$/);
+    await expect(section.locator("source")).toHaveAttribute("src", /-promo(?:-clean)?\.mp4$/);
     await section.getByRole("button", { name: "Full capture", exact: true }).click();
   }
   await section.getByRole("button", { name: "TGSlots · Gameplay reel", exact: true }).click();

@@ -11,4 +11,4 @@ ISRC: USUAN1500029.
 Both licensed under Creative Commons Attribution 4.0:
 https://creativecommons.org/licenses/by/4.0/
 
-Edited excerpts, fades and loudness normalization. Music is the sole audio source in every promo; no gameplay audio, game soundtrack or added SFX. Full captures are silent. Source capture, Nine Lives music and montage approved by owner on 2026-10-08.
+Edited excerpts, fades and loudness normalization. Music is the sole audio source in every promo; no gameplay audio, game soundtrack or added SFX. Full captures are silent. Source capture and Nine Lives music approved by owner on 2026-10-08. New clean Nine Lives edit requested by owner: fixed-step 60 FPS, no editorial text, credits outside the movie.

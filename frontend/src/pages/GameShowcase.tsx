@@ -7,7 +7,7 @@ const clips = [
     id: "nine-lives",
     title: "Nine Lives",
     description: "nineLives",
-    duration: "0:31",
+    duration: "0:25",
     fullDuration: "1:40",
     hasPromo: true,
   },
@@ -62,8 +62,8 @@ export function GameShowcase() {
   const clip = clips[selected] ?? clips[0];
   const isReel = clip.id === "tgslots-reel";
   const isNineLives = clip.id === "nine-lives";
-  const effectiveFormat = clip.hasPromo ? format : "gameplay";
-  const file = `${media}${clip.id}${isReel ? "" : `-${effectiveFormat}`}.mp4`;
+  const effectiveFormat = isNineLives ? "promo" : clip.hasPromo ? format : "gameplay";
+  const file = `${media}${clip.id}${isReel ? "" : `-${effectiveFormat}${isNineLives && effectiveFormat === "promo" ? "-clean" : ""}`}.mp4`;
   const title = isReel ? t("showreel.reel") : clip.title;
   const captionLanguage = i18n.resolvedLanguage?.startsWith("ru") ? "ru" : "en";
 
@@ -86,7 +86,7 @@ export function GameShowcase() {
           <track
             key={captionLanguage}
             kind="captions"
-            src={`${media}${clip.id}${isReel ? "" : `-${effectiveFormat}`}-${captionLanguage}.vtt`}
+            src={`${media}${clip.id}${isReel ? "" : `-${effectiveFormat}${isNineLives ? "-clean" : ""}`}-${captionLanguage}.vtt`}
             srcLang={captionLanguage}
             label={captionLanguage === "ru" ? "Русский" : "English"}
           />
@@ -98,7 +98,7 @@ export function GameShowcase() {
             <p>{t(`showreel.${clip.description}`)}</p>
             {isNineLives && <p>{t("showreel.nineQuality")}</p>}
           </div>
-          {!isReel && clip.hasPromo && (
+          {!isReel && !isNineLives && clip.hasPromo && (
             <div className="showreel-formats" role="group" aria-label={t("showreel.format")}>
               {(["gameplay", "promo"] as const).map((value) => (
                 <button
@@ -138,7 +138,11 @@ export function GameShowcase() {
             <div className="showreel-thumbnail">
               <img src={`${media}${item.id}.webp`} alt="" loading="lazy" width="480" height="270" />
               <span>
-                {!item.hasPromo || format === "gameplay" ? item.fullDuration : item.duration}
+                {item.id === "nine-lives"
+                  ? item.duration
+                  : !item.hasPromo || format === "gameplay"
+                    ? item.fullDuration
+                    : item.duration}
               </span>
             </div>
             <span className="showreel-choice-title">
@@ -149,7 +153,10 @@ export function GameShowcase() {
       </div>
       <div className="showreel-footer">
         <p>{t("showreel.note")}</p>
-        <a href={`${media}${isNineLives ? "nine-lives" : "tgslots"}-linkedin.mp4`} download>
+        <a
+          href={`${media}${isNineLives ? "nine-lives-linkedin-clean" : "tgslots-linkedin"}.mp4`}
+          download
+        >
           {t("showreel.linkedin")}
         </a>
         {isNineLives && (

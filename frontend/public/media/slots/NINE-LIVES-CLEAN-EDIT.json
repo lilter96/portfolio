@@ -1,0 +1,51 @@
+{
+  "revision": "clean-60",
+  "fps": 60,
+  "dimensions": [
+    2560,
+    1440
+  ],
+  "duration": 24.233333333333334,
+  "source": "Frame-by-frame rendering of actual recorded API session outcomes, through the unchanged game client. Original outcome transcript retained; no outcome fabrication or optical-flow interpolation. Animation time advances exactly 1/60 s per output frame; browser timer ticks rounded to the nearest millisecond.",
+  "sourceAudit": "nine-lives-1440p-hfr-review/capture-audit.json",
+  "shots": [
+    {
+      "take": "life-04",
+      "frames": 415,
+      "duration": 6.916666666666667
+    },
+    {
+      "take": "life-06",
+      "frames": 208,
+      "duration": 3.466666666666667
+    },
+    {
+      "take": "life-07",
+      "frames": 554,
+      "duration": 9.233333333333333
+    },
+    {
+      "take": "life-09",
+      "frames": 277,
+      "duration": 4.616666666666666
+    }
+  ],
+  "editing": "Chronological highlights; straight cuts near music beats; no editorial text, descriptions, end cards, SVG or gameplay audio. Native game UI remains.",
+  "music": {
+    "title": "Deadly Roulette",
+    "artist": "Kevin MacLeod (incompetech.com)",
+    "license": "CC BY 4.0",
+    "source": "https://incompetech.com/wordpress/2016/06/deadly-roulette/",
+    "musicStart": 20.08,
+    "edits": "Excerpt, short fades, loudness normalization"
+  },
+  "outputs": [
+    "nine-lives-clean-1440p60-final.mp4",
+    "nine-lives-clean-linkedin-final.mp4"
+  ],
+  "portraitDimensions": [
+    1440,
+    1800
+  ],
+  "encoding": "Single continuous H.264 High stream; 60 FPS, 1-second GOP, faststart. No stream-copy splice of independently encoded shots."
+}

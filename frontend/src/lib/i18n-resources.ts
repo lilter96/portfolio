@@ -1,7 +1,7 @@
 // Bilingual profile copy, based on the user-supplied CVs.
 const en = {
   "showreel": {
-    "nineQuality": "1440p · 120 FPS export · ≈77 actual captured FPS · normal speed",
+    "nineQuality": "1440p · 60 FPS · gameplay + music",
     "masterCapture": "Download original 1440p capture",
     "nineLives": "New flagship · 6 × 5 collector cascades · nine free spins · carried multiplier",
     "club": "Hold & Spin, persistent coins and full-column boosters. Go server with a RabbitMQ-backed math worker.",
@@ -200,7 +200,7 @@ const en = {
 
 const ru: typeof en = {
   "showreel": {
-    "nineQuality": "1440p · экспорт 120 FPS · ≈77 реальных кадров/с · обычная скорость",
+    "nineQuality": "1440p · 60 FPS · геймплей + музыка",
     "masterCapture": "Скачать оригинал записи 1440p",
     "nineLives": "Новый флагман · каскады 6 × 5 · сбор фишек · девять фриспинов · накопительный множитель",
     "club": "Hold & Spin, закреплённые монеты и бустеры заполненных колонок. Go-сервер и математический worker через RabbitMQ.",
