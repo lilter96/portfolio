@@ -78,7 +78,7 @@ namespace Portfolio.Infrastructure.Tests.Data
         {
             await _seeder.SeedAsync();
 
-            Assert.Equal(9, await _context.Projects.CountAsync());
+            Assert.Equal(10, await _context.Projects.CountAsync());
         }
     }
 }

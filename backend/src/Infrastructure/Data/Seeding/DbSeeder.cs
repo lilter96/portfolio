@@ -179,7 +179,19 @@ namespace Portfolio.Infrastructure.Data.Seeding
                     status: ProjectStatus.OpenSource,
                     role: "Personal engineering project",
                     evidenceUrl: "https://github.com/lilter96/signal-processing-lab/blob/main/README.md",
-                    domain: ProjectDomain.Fullstack));
+                    domain: ProjectDomain.Fullstack),
+
+                new Project(
+                    title: "Headphones Battery for GNOME",
+                    description: "GNOME Shell extension: precise 1% headset battery over Bluetooth LE, remaining listening time from a per-device drain model learned by recursive Bayesian least squares, and a spring-animated Sims cat drawn with Cairo. 36 gjs tests and public CI. Tested with one headset (JBL Tune 520BT); UI in Russian.",
+                    url: null,
+                    sourceUrl: "https://github.com/lilter96/gnome-headphones-battery",
+                    technologies: ["JavaScript", "GJS", "GNOME Shell", "Cairo", "Bluetooth LE", "Bayesian estimation"],
+                    sortOrder: 9,
+                    status: ProjectStatus.OpenSource,
+                    role: "Personal engineering project",
+                    evidenceUrl: "https://github.com/lilter96/gnome-headphones-battery/blob/main/README.md",
+                    domain: ProjectDomain.RealTime));
 
             _logger.LogInformation("Seeded projects");
         }
