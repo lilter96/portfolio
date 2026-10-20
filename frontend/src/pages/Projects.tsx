@@ -1,6 +1,8 @@
 import { useMemo, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { projectDescriptionsRussian } from "@/lib/project-locales";
+import { projectMedia, wideCards } from "@/lib/project-media";
+import type { MediaSize, ProjectMedia } from "@/lib/project-media";
 import { useProjects } from "@/hooks/useProjects";
 import { useGitHubRepos } from "@/hooks/useGitHubRepos";
 import { QueryState } from "@/components/QueryState";
@@ -156,6 +158,8 @@ function ProjectsGrid({
     return result;
   }, [projects, techFilter, domainFilter]);
 
+  const wide = useMemo(() => wideCards(filtered), [filtered]);
+
   if (filtered.length === 0) {
     return (
       <div className="projects-empty" role="status">
@@ -181,6 +185,7 @@ function ProjectsGrid({
             project={project}
             github={ghMatch}
             isFlagship={isFlagship}
+            isWide={wide.has(project.id)}
             delay={((i % 6) + 1) as 1 | 2 | 3 | 4 | 5 | 6}
           />
         );
@@ -197,20 +202,25 @@ function ProjectCard({
   project,
   github,
   isFlagship,
+  isWide,
   delay,
 }: {
   project: ProjectDto;
   github?: GitHubRepoDto;
   isFlagship: boolean;
+  isWide: boolean;
   delay: 1 | 2 | 3 | 4 | 5 | 6;
 }) {
   const { t, i18n } = useTranslation();
+  const media = projectMedia[project.title];
 
   return (
     <div
-      className={`project-card reveal reveal-${delay} ${isFlagship ? "project-card-flagship" : ""}`}
+      className={`project-card reveal reveal-${delay} ${isFlagship ? "project-card-flagship" : ""} ${isWide ? "project-card-wide" : ""}`}
       role="listitem"
     >
+      {media && <MediaStage media={media} ru={i18n.language.startsWith("ru")} />}
+
       {/* Header row: status badge + domain label */}
       <div className="project-card-header">
         <StatusBadge status={project.status as ProjectStatus} />
@@ -289,5 +299,59 @@ function ProjectCard({
         )}
       </div>
     </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Media Stage: the animation beside its screenshots
+   ───────────────────────────────────────────────────────────── */
+
+// CSS width for a picture shown `height` px tall; it still shrinks to fit.
+const widthAt = (size: MediaSize, height: number) => ({ width: `${Math.round((size.w * height) / size.h)}px` });
+
+function MediaStage({ media, ru }: { media: ProjectMedia; ru: boolean }) {
+  const base = `${import.meta.env.BASE_URL}media/projects/${media.dir}/`;
+  const text = ru ? media.ru : media.en;
+
+  return (
+    <figure className="project-media">
+      <div className="project-media-stage">
+        <picture className="project-media-anim">
+          <source srcSet={`${base}still.webp`} media="(prefers-reduced-motion: reduce)" />
+          <img
+            src={`${base}demo.webp`}
+            alt={text.animation}
+            width={media.animation.w}
+            height={media.animation.h}
+            style={widthAt(media.animation, 400)}
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <div className="project-media-shots">
+          <a href={`${base}cards.webp`} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`${base}cards.webp`}
+              alt={text.cards}
+              width={media.cards.w}
+              height={media.cards.h}
+              style={widthAt(media.cards, 340)}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <img
+            src={`${base}panel.webp`}
+            alt={text.panel}
+            width={media.panel.w}
+            height={media.panel.h}
+            style={widthAt(media.panel, 40)}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+      <figcaption className="project-media-note">{text.note}</figcaption>
+    </figure>
   );
 }
