@@ -192,6 +192,27 @@ export const showcaseProjects: ProjectDto[] = [
     "role": "Personal engineering project",
     "evidenceUrl": "https://github.com/lilter96/gnome-headphones-battery/blob/main/README.md",
     "domain": "RealTime"
+  },
+  {
+    "id": "gnome-dota-time",
+    "title": "Dota Time for GNOME",
+    "description": "GNOME Shell extension that counts time in Dota 2: live matches over Valve's Game State Integration, 60 days of OpenDota history, and comparisons that set match clock against match clock until whole days are known, with a Fisher exact test before a win-rate gap is called real. A Cairo Roshan on springs goes into aggro after four hours. 38 gjs tests and public CI; live matches checked with synthetic posts so far; UI in Russian.",
+    "url": null,
+    "sourceUrl": "https://github.com/lilter96/gnome-dota-time",
+    "technologies": [
+      "JavaScript",
+      "GJS",
+      "GNOME Shell",
+      "Cairo",
+      "Game State Integration",
+      "OpenDota API",
+      "Statistics"
+    ],
+    "sortOrder": 10,
+    "status": "OpenSource",
+    "role": "Personal engineering project",
+    "evidenceUrl": "https://github.com/lilter96/gnome-dota-time/blob/main/README.md",
+    "domain": "RealTime"
   }
 ];
 
