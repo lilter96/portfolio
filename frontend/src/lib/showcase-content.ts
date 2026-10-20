@@ -196,7 +196,7 @@ export const showcaseProjects: ProjectDto[] = [
   {
     "id": "gnome-dota-time",
     "title": "Dota Time for GNOME",
-    "description": "GNOME Shell extension that counts time in Dota 2: live matches over Valve's Game State Integration, 60 days of OpenDota history, and comparisons that set match clock against match clock until whole days are known, with a Fisher exact test before a win-rate gap is called real. A Cairo Roshan on springs goes into aggro after four hours. 38 gjs tests and public CI; live matches checked with synthetic posts so far; UI in Russian.",
+    "description": "GNOME Shell extension that counts time in Dota 2: live matches over Valve's Game State Integration, 60 days of OpenDota history, and comparisons that set match clock against match clock until whole days are known, with a Fisher exact test before a win-rate gap is called real. A Cairo Roshan on springs goes into aggro after four hours. 40 gjs tests and public CI; a live ranked match matched OpenDota to the second; UI in Russian.",
     "url": null,
     "sourceUrl": "https://github.com/lilter96/gnome-dota-time",
     "technologies": [
