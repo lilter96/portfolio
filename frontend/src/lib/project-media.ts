@@ -63,6 +63,24 @@ export const projectMedia: Record<string, ProjectMedia> = {
       note: "Снято в headless GNOME Shell на выдуманных данных.",
     },
   },
+  "Psiphon Tunnel for GNOME": {
+    dir: "gnome-psiphon-tunnel",
+    animation: { w: 416, h: 873 },
+    cards: { w: 1725, h: 1179 },
+    panel: { w: 696, h: 132 },
+    en: {
+      animation: "Psiphon finds a server and the mole climbs out with its lamp on, then the stop button asks about the three programs using the tunnel and the popup waits for them",
+      cards: "Three moments: the tunnel open with Firefox, Claude Code and Codex going through it; the question before closing it; waiting for them to close",
+      panel: "The top bar helmet: off, connecting, open, waiting to close, crashed",
+      note: "Rendered in a headless GNOME Shell against a fake Psiphon; the programs are made up. UI in Russian.",
+    },
+    ru: {
+      animation: "Psiphon находит сервер, крот вылезает с зажжённой лампой, затем кнопка выключения спрашивает про три программы в туннеле, и попап ждёт их",
+      cards: "Три момента: туннель открыт, через него ходят Firefox, Claude Code и Codex; вопрос перед выключением; ожидание, пока они закроются",
+      panel: "Шлем в панели: выключен, подключается, открыт, ждёт, чтобы выключиться, упал",
+      note: "Снято в headless GNOME Shell с фейковым Psiphon; программы выдуманы.",
+    },
+  },
 };
 
 /** Which cards take the full row: every card with media, and a card that

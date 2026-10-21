@@ -203,6 +203,18 @@ namespace Portfolio.Infrastructure.Data.Seeding
                     status: ProjectStatus.OpenSource,
                     role: "Personal engineering project",
                     evidenceUrl: "https://github.com/lilter96/gnome-dota-time/blob/main/README.md",
+                    domain: ProjectDomain.RealTime),
+
+                new Project(
+                    title: "Psiphon Tunnel for GNOME",
+                    description: "GNOME Shell extension for Psiphon's console client. It starts Psiphon in a systemd scope of its own, so a Shell crash cannot take the tunnel down, and closes it with SIGTERM, five seconds for its goodbye and SIGKILL only if it hangs. Before closing, it finds the programs still using the tunnel by their proxy variables and sockets and offers to wait until they exit; the wait survives a Shell restart. A Cairo mole in a miner's helmet on springs. 32 gjs tests against a fake Psiphon and public CI; the whole cycle checked against a copy of the real client in a headless Shell; UI in Russian.",
+                    url: null,
+                    sourceUrl: "https://github.com/lilter96/gnome-psiphon-tunnel",
+                    technologies: ["JavaScript", "GJS", "GNOME Shell", "Cairo", "systemd", "Linux processes", "POSIX shell"],
+                    sortOrder: 11,
+                    status: ProjectStatus.OpenSource,
+                    role: "Personal engineering project",
+                    evidenceUrl: "https://github.com/lilter96/gnome-psiphon-tunnel/blob/main/README.md",
                     domain: ProjectDomain.RealTime));
 
             _logger.LogInformation("Seeded projects");
