@@ -207,10 +207,10 @@ namespace Portfolio.Infrastructure.Data.Seeding
 
                 new Project(
                     title: "Psiphon Tunnel for GNOME",
-                    description: "GNOME Shell extension for Psiphon's console client. It starts Psiphon in a systemd scope of its own, so a Shell crash cannot take the tunnel down, and closes it with SIGTERM, five seconds for its goodbye and SIGKILL only if it hangs. Before closing, it finds the programs still using the tunnel by their proxy variables and sockets and offers to wait until they exit; the wait survives a Shell restart. A Cairo mole in a miner's helmet on springs. 32 gjs tests against a fake Psiphon and public CI; the whole cycle checked against a copy of the real client in a headless Shell; UI in Russian.",
+                    description: "GNOME Shell extension and one-command installer for Psiphon's console client: install.sh fetches Psiphon and its config pinned by sha256, the country is picked in the popup or with psi region DE, and an optional switch points GNOME's proxy at the tunnel and puts it back as it was. Psiphon runs in a systemd scope of its own, so a Shell crash cannot take the tunnel down; before closing it, the extension finds the programs still using the tunnel and offers to wait until they exit. A Cairo mole in a miner's helmet on springs; English and Russian. 55 gjs tests against a fake Psiphon; CI runs the whole cycle in the headless Shells of GNOME 46, 48, 49, 50 and 51.",
                     url: null,
                     sourceUrl: "https://github.com/lilter96/gnome-psiphon-tunnel",
-                    technologies: ["JavaScript", "GJS", "GNOME Shell", "Cairo", "systemd", "Linux processes", "POSIX shell"],
+                    technologies: ["JavaScript", "GJS", "GNOME Shell", "Cairo", "systemd", "Linux processes", "POSIX shell", "Docker"],
                     sortOrder: 11,
                     status: ProjectStatus.OpenSource,
                     role: "Personal engineering project",
